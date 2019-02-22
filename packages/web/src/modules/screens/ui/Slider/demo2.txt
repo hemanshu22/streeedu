@@ -1,0 +1,222 @@
+import * as React from "react";
+import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
+// import MobileStepper from "@material-ui/core/MobileStepper";
+// import Paper from "@material-ui/core/Paper";
+// import Typography from "@material-ui/core/Typography";
+// import Button from "@material-ui/core/Button";
+// import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
+// import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+// import image1 from "../../../utils/img/city.jpg";
+// import image2 from "../../../utils/img/bg2.jpg";
+// import image3 from "../../../utils/img/bg3.jpg";
+// import image4 from "../../../utils/img/bg.jpg";
+// import SwipeableViews from "react-swipeable-views";
+import Carousel from "nuka-carousel";
+
+// import * as autoPlay from "react-swipeable-views-utils";
+
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+// const tutorialSteps = [
+//   {
+//     label: "San Francisco – Oakland Bay Bridge, United States",
+//     imgPath: image1
+//     // "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60"
+//   },
+//   {
+//     label: "Bird",
+//     imgPath: image2
+//     // "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60"
+//   },
+//   {
+//     label: "Bali, Indonesia",
+//     imgPath: image3
+//     // "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80"
+//   },
+//   {
+//     label: "NeONBRAND Digital Marketing, Las Vegas, United States",
+//     imgPath: image4
+//     // "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60"
+//   },
+//   {
+//     label: "Goč, Serbia",
+//     imgPath:
+//       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60"
+//   }
+// ];
+
+const styles = (theme: any) =>
+  createStyles({
+    root: {
+      maxWidth: 400,
+      flexGrow: 1
+    },
+    header: {
+      display: "flex",
+      alignItems: "center",
+      height: 50
+      // paddingLeft: theme.spacing.unit * 4,
+      // backgroundColor: theme.palette.background.default
+    },
+    img: {
+      height: 255,
+      display: "block",
+      maxWidth: 400,
+      overflow: "hidden",
+      width: "100%"
+    },
+    slide: {
+      padding: 15,
+      minHeight: 100,
+      color: "#fff"
+    },
+    slide1: {
+      background: "#FEA900"
+    },
+    slide2: {
+      background: "#B3DC4A"
+    },
+    slide3: {
+      background: "#6AC0FF"
+    },
+    mobileStepper: {}
+  });
+
+interface Props extends WithStyles<typeof styles> {
+  theme: any;
+}
+class Slider extends React.Component<Props> {
+  state = {
+    activeStep: 0
+  };
+  handleNext = () => {
+    this.setState({
+      activeStep: this.state.activeStep + 1
+    });
+  };
+  handleBack = () => {
+    this.setState({
+      activeStep: this.state.activeStep - 1
+    });
+  };
+  handleStepChange = () => {
+    this.setState({
+      activeStep: this.state.activeStep
+    });
+  };
+  render() {
+    // const { classes } = this.props;
+    // const { activeStep } = this.state;
+    // const maxSteps = tutorialSteps.length;
+
+    return (
+      <Carousel>
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+      </Carousel>
+      // <SwipeableViews>
+      //   <div
+      //     style={Object.assign(
+      //       {},
+      //       classNames({
+      //         [classes.slide]: true,
+      //         [classes.slide1]: true
+      //       })
+      //     )}
+      // className={classNames({
+      //   [classes.slide]: true,
+      //   [classes.slide1]: true
+      // })}
+      // style={Object.assign({}, styles.slide, styles.slide1)}
+      //   >
+      //     slide n°1
+      //   </div>
+      //   <div
+      //     style={Object.assign(
+      //       {},
+      //       classNames({
+      //         [classes.slide]: true,
+      //         [classes.slide2]: true
+      //       })
+      //     )}
+      //   >
+      //     slide n°2
+      //   </div>
+      //   <div
+      //     style={Object.assign(
+      //       {},
+      //       classNames({
+      //         [classes.slide]: true,
+      //         [classes.slide3]: true
+      //       })
+      //     )}
+      //   >
+      //     slide n°3
+      //   </div>
+      // </SwipeableViews>
+      // <div className={classes.root}>
+      //   <Paper square elevation={0} className={classes.header}>
+      //     <Typography>{tutorialSteps[activeStep].label}</Typography>
+      //   </Paper>
+      //   <AutoPlaySwipeableViews
+      //     axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+      //     index={activeStep}
+      //     onChangeIndex={this.handleStepChange}
+      //     enableMouseEvents
+      //   >
+      //     {tutorialSteps.map((step, index) => (
+      //       <div key={step.label}>
+      //         {Math.abs(activeStep - index) <= 2 ? (
+      //           <img
+      //             className={classes.img}
+      //             src={step.imgPath}
+      //             alt={step.label}
+      //           />
+      //         ) : null}
+      //       </div>
+      //     ))}
+      //   </AutoPlaySwipeableViews>
+      //   <MobileStepper
+      //     steps={maxSteps}
+      //     position="static"
+      //     activeStep={activeStep}
+      //     className={classes.mobileStepper}
+      //     nextButton={
+      //       <Button
+      //         size="small"
+      //         onClick={this.handleNext}
+      //         disabled={activeStep === maxSteps - 1}
+      //       >
+      //         Next
+      //         {theme.direction === "rtl" ? (
+      //           <KeyboardArrowLeft />
+      //         ) : (
+      //           <KeyboardArrowRight />
+      //         )}
+      //       </Button>
+      //     }
+      //     backButton={
+      //       <Button
+      //         size="small"
+      //         onClick={this.handleBack}
+      //         disabled={activeStep === 0}
+      //       >
+      //         {theme.direction === "rtl" ? (
+      //           <KeyboardArrowRight />
+      //         ) : (
+      //           <KeyboardArrowLeft />
+      //         )}
+      //         Back
+      //       </Button>
+      //     }
+      //   />
+      // </div>
+    );
+  }
+}
+
+export default withStyles(styles)(Slider);

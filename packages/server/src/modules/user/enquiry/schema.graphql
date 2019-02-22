@@ -1,0 +1,16 @@
+type Query {
+  getenquiryemail(email: String): String!
+}
+
+type Mutation {
+  enquiry(
+    name: String!
+    email: String!
+    parentname: String!
+    school: String!
+    mobile: String!
+    area: String!
+    grade: String!
+    enquiry: String!
+  ): [Error!]
+}

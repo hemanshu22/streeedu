@@ -1,0 +1,14 @@
+type Query {
+  getworkshopemail(email: String): String!
+}
+
+type Mutation {
+  workshop(
+    name: String!
+    email: String!
+    classs: String!
+    school: String!
+    mobile: String!
+    area: String!
+  ): [Error!]
+}

@@ -1,0 +1,7 @@
+type Query {
+  dashboard(desc_number: Int, name: String): String!
+}
+
+type Mutation {
+  enter_url(desc: String!, desc_number: Int!): [Error!]
+}
