@@ -119,8 +119,8 @@ const styles = (theme: any) =>
       padding: "10px"
     },
     gridfour: {
-      backgroundColor: "#f7f7f7",
-      marginTop: "-4px"
+      backgroundColor: "#f7f7f7"
+      // marginTop: "-4px"
       // padding: "10px"
     },
     gridthree: {
@@ -325,7 +325,7 @@ class SectionThree extends React.Component<Props> {
             transform="translate(0-1977)"
           />
         </svg>
-        <br />
+        {/* <br /> */}
         <Grid
           container={true}
           className={classes.gridfour}

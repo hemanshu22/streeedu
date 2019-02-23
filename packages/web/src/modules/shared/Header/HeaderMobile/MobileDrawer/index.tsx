@@ -9,8 +9,7 @@ const styles = createStyles({
   },
   fullList: {
     width: "auto"
-  },
-  drawerList: { height: 40 }
+  }
 });
 
 interface Props extends WithStyles<typeof styles> {
@@ -19,7 +18,7 @@ interface Props extends WithStyles<typeof styles> {
 
 class MobileDrawer extends React.Component<Props> {
   state = {
-    left: this.props.open
+    left: false
   };
 
   toggleDrawer = (side: any, open: any) => () => {
@@ -28,7 +27,7 @@ class MobileDrawer extends React.Component<Props> {
     });
   };
   componentWillReceiveProps(props: any) {
-    this.setState({ left: this.props.open });
+    this.setState({ left: props.open });
   }
   render() {
     return (

@@ -24,12 +24,9 @@ class HeaderMobile extends React.Component<Props> {
   };
 
   render() {
-    //  const { classes } = this.props;
-
     return (
       <div>
         <AppBarMobile />
-        {/* <MobileDrawer /> */}
       </div>
     );
   }

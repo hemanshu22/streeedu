@@ -9,29 +9,29 @@ import SectionThree from "./SectionThree";
 
 const styles = (theme: any) =>
   createStyles({
-    carousel: {
-      position: "relative",
-      height: "100%"
-    },
-    video: {
-      transition: " 1s opacity",
-      minWidth: "100%",
-      minHeight: "100%",
-      width: "auto",
-      height: "auto"
-    },
-    paper: {
-      borderRadius: "0px",
-      //   backgroundColor: "#F7F9FA",
-      boxShadow: "none",
-      width: "100%",
-      height: "auto"
-      //   backgroundImage: `url(${backgroundImage})`
-    },
-    image: {
-      maxWidth: "100%",
-      Height: "auto"
-    }
+    // carousel: {
+    //   position: "relative",
+    //   height: "100%"
+    // },
+    // video: {
+    //   transition: " 1s opacity",
+    //   minWidth: "100%",
+    //   minHeight: "100%",
+    //   width: "auto",
+    //   height: "auto"
+    // },
+    // paper: {
+    //   borderRadius: "0px",
+    //   //   backgroundColor: "#F7F9FA",
+    //   boxShadow: "none",
+    //   width: "100%",
+    //   height: "auto"
+    //   //   backgroundImage: `url(${backgroundImage})`
+    // },
+    // image: {
+    //   maxWidth: "100%",
+    //   Height: "auto"
+    // }
   });
 
 interface Props extends WithStyles<typeof styles> {}

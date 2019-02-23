@@ -29,7 +29,6 @@ const styles = (theme: any) =>
     },
     appbarcolor: {
       backgroundColor: "white"
-
       // boxShadow: "none"
     },
     appbarcolortop: {
@@ -66,9 +65,6 @@ class AppBarMobile extends React.Component<Props> {
 
     return (
       <div className={classes.root}>
-        {/* <AppBar position="fixed" className={classes.appbarcolortop}>
-          <Logo />
-        </AppBar> */}
         <AppBar position="fixed" className={classes.appbarcolor}>
           <Logo />
           <Toolbar>
@@ -104,6 +100,11 @@ class AppBarMobile extends React.Component<Props> {
             </Grid>
           </Toolbar>
         </AppBar>
+        <br />
+        <br />
+        <br /> <br />
+        <br />
+        {/* <br /> */}
       </div>
     );
   }

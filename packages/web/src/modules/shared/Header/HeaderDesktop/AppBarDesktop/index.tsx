@@ -21,7 +21,9 @@ const styles = (theme: any) =>
       flexGrow: 1
     },
     appbarcolor: {
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      top: 0,
+      bottom: "auto"
     },
     grid: {
       paddingTop: "10px"
@@ -77,6 +79,10 @@ class AppBarDesktop extends React.Component<Props> {
             </Grid>
           </Toolbar>
         </AppBar>
+        <br />
+        <br />
+        <br />
+        {/* <br /> */}
       </div>
     );
   }

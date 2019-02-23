@@ -10,10 +10,11 @@ const styles = (theme: any) =>
     },
     stree: {
       width: "180px",
-      padding: "5px"
+      paddingTop: "6px"
+      // padding: "5px"
     },
     logo: {
-      paddingLeft: "30px"
+      //  paddingLeft: "30px"
     }
   });
 
@@ -52,8 +53,8 @@ class Logo extends React.Component<Props> {
           </Grid>
         </Hidden>
         <Hidden only={["xs", "sm", "md"]}>
-          <Grid container={true}>
-            <Grid item={true}>
+          <Grid container={true} justify="center">
+            <Grid item={true} justify="center">
               <img
                 src="http://www.streeedu.com/img/stree/logo.png"
                 alt="stree"

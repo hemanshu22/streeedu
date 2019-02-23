@@ -9,7 +9,7 @@ import image4 from "../../../../utils/img/bg.jpg";
 const styles = () =>
   createStyles({
     root: {
-      maxWidth: 400,
+      // maxWidth: 400,
       flexGrow: 1
     },
     "slider-control-centerleft button": {
@@ -36,6 +36,12 @@ class Slider extends React.Component<Props> {
         dragging={true}
         swiping={true}
       >
+        {/* <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" /> */}
         <img src={image1} />
         <img src={image2} />
         <img src={image3} />
