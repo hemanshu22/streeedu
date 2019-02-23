@@ -55,7 +55,7 @@ class SectionOne extends React.Component<Props> {
               align="center"
               className={classes.typoone}
             >
-              Hello Streeeeeeee
+              What we do for you
             </Typography>
             <Typography
               variant="subheading"
