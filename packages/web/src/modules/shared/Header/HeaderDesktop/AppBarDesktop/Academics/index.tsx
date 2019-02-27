@@ -6,6 +6,7 @@ import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
+import { Link } from "react-router-dom";
 
 const styles = (theme: any) =>
   createStyles({
@@ -60,17 +61,52 @@ class Academics extends React.Component<Props> {
           <Paper className={classes.paper}>
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
-                <MenuItem onClick={this.handleClose}>About PCCP</MenuItem>
-                <MenuItem onClick={this.handleClose}>Key Process</MenuItem>
-                <MenuItem onClick={this.handleClose}>
-                  Academic Excellence
-                </MenuItem>
-                <MenuItem onClick={this.handleClose}>
-                  Innovation & Continual Improvement.
-                </MenuItem>
-                <MenuItem onClick={this.handleClose}>
-                  Admission/Career Counselling
-                </MenuItem>
+                <Link
+                  to={{
+                    pathname: "/pccp"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={this.handleClose}>About PCCP</MenuItem>
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/key"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={this.handleClose}>Key Process</MenuItem>
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/academicexcellence"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={this.handleClose}>
+                    Academic Excellence
+                  </MenuItem>
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/innovative"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={this.handleClose}>
+                    Innovation & Continual Improvement
+                  </MenuItem>
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/career"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={this.handleClose}>
+                    Admission/Career Counselling
+                  </MenuItem>
+                </Link>
               </MenuList>
             </ClickAwayListener>
           </Paper>

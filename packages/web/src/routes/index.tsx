@@ -29,13 +29,12 @@ export const Routes = () => (
       />
       <Route exact={true} path="/workshop" component={WorkshopFormConnector} />
       <Route exact={true} path="/enquiry" component={EnquiryFormConnector} />
-
       <Route exact={true} path="/aboutus" component={AboutUs} />
       <Route exact={true} path="/ourteam" component={OurTeam} />
-      <Route exact={true} path="/successstories" component={SuccessStories} />
-      <Route exact={true} path="/single-course" component={AboutPccp} />
+      <Route exact={true} path="/success" component={SuccessStories} />
+      <Route exact={true} path="/pccp" component={AboutPccp} />
       <Route exact={true} path="/key" component={KeyProcess} />
-      <Route exact={true} path="/innovations" component={Innovations} />
+      <Route exact={true} path="/innovative" component={Innovations} />
       <Route exact={true} path="/career" component={Admissions} />
       <Route exact={true} path="/faq" component={FAQ} />
       {/* <Route

@@ -9,8 +9,8 @@ import Paper from "@material-ui/core/Paper";
 const styles = () => ({
   root: {
     margin: "10px",
-    minHeight: "250px",
-    padding: "10px"
+    padding: "10px",
+    minHeight: "298px"
   }
 });
 
@@ -20,6 +20,7 @@ class Screen extends Component {
 
     return (
       <div>
+        <br />
         <Helmet title={title} />
         <Paper className={classes.root} elevation={2}>
           {React.cloneElement(children, { match: match })}

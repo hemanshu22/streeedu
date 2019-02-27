@@ -2,12 +2,9 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-// import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Courses from "./Courses";
 import Academics from "./Academics";
-// import Gallery from "./Gallery";
-// import Faq from "./Faq";
 import Enquiry from "./Enquiry";
 import Logo from "../../Logo";
 import Grid from "@material-ui/core/Grid";
@@ -31,7 +28,6 @@ const styles = (theme: any) =>
     enquiry: {
       paddingTop: "7px"
     },
-
     logo: {
       paddingLeft: "40px"
     }
@@ -52,6 +48,7 @@ class AppBarDesktop extends React.Component<Props> {
               <Grid item={true} sm={4} md={4} lg={4} className={classes.logo}>
                 <Logo />
               </Grid>
+
               <Grid item={true} sm={1} md={1} lg={1} className={classes.grid}>
                 <AboutUs />
               </Grid>

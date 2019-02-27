@@ -8,6 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const styles = createStyles({
   list: {
@@ -61,7 +62,14 @@ class DrawerComponent extends React.Component<Props> {
         <List>
           <ListItem button={true} className={classes.drawerList}>
             <Typography variant="headline" align="center">
-              STREE | Resonance
+              <Link
+                to={{
+                  pathname: "/"
+                }}
+                style={{ textDecoration: "none" }}
+              >
+                STREE | Resonance
+              </Link>
             </Typography>
           </ListItem>
           <Divider />
@@ -74,17 +82,38 @@ class DrawerComponent extends React.Component<Props> {
           <Collapse in={this.state.open} timeout="auto" unmountOnExit={true}>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                About Us
+                <Link
+                  to={{
+                    pathname: "/aboutus"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  About Us
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Success Stories
+                <Link
+                  to={{
+                    pathname: "/success"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Success Stories
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Our Team
+                <Link
+                  to={{
+                    pathname: "/ourteam"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Our Team
+                </Link>
               </Typography>
             </ListItem>
           </Collapse>
@@ -108,27 +137,62 @@ class DrawerComponent extends React.Component<Props> {
           >
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                About PCCP
+                <Link
+                  to={{
+                    pathname: "/pccp"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  About PCCP
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Key Process
+                <Link
+                  to={{
+                    pathname: "/key"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Key Process
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Academic Excellence
+                <Link
+                  to={{
+                    pathname: "/academicexcellence"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Academic Excellence
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Innovation & Continual Improvement
+                <Link
+                  to={{
+                    pathname: "/innovative"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Innovation & Continual Improvement
+                </Link>
               </Typography>
             </ListItem>
             <ListItem button={true}>
               <Typography variant="body1" align="center">
-                Admission/Career Counselling
+                <Link
+                  to={{
+                    pathname: "/career"
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  Admission/Career Counselling
+                </Link>
               </Typography>
             </ListItem>
           </Collapse>
@@ -141,21 +205,28 @@ class DrawerComponent extends React.Component<Props> {
           <Divider />
           <ListItem button={true}>
             <Typography variant="title" align="center">
-              Faq
+              <Link
+                to={{
+                  pathname: "/faq"
+                }}
+                style={{ textDecoration: "none" }}
+              >
+                Faq
+              </Link>
             </Typography>
           </ListItem>
           <Divider />
           <ListItem button={true}>
-            <Button
-              variant="outlined"
-              color="primary"
-              // className={classes.button}
-            >
-              EQUIRY NOW
+            <Button variant="outlined" color="primary">
+              <Link
+                to={{
+                  pathname: "/enquiry"
+                }}
+                style={{ textDecoration: "none" }}
+              >
+                EQUIRY NOW
+              </Link>
             </Button>
-            {/* <Typography variant="title" align="center">
-              ENQUIRY
-            </Typography> */}
           </ListItem>
         </List>
       </div>

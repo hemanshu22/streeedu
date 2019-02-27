@@ -1,6 +1,7 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
 
 const styles = (theme: any) =>
   createStyles({
@@ -30,9 +31,11 @@ class Enquiry extends React.Component<Props> {
 
     return (
       <div className={classes.enquiry}>
-        <Button className={classes.button} variant="outlined">
-          ENQUIRY
-        </Button>
+        <Link href="/enquiry" style={{ textDecoration: "none" }}>
+          <Button className={classes.button} variant="outlined">
+            ENQUIRY
+          </Button>
+        </Link>
       </div>
     );
   }

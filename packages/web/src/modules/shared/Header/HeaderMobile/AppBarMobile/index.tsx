@@ -10,7 +10,7 @@ import MobileDrawer from "../MobileDrawer";
 // import AboutUs from "./Menu/AboutUs";
 // import Courses from "./Menu/Courses";
 // import Academics from "./Menu/Academics";
-// import Gallery from "./Menu/Gallery";
+import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Logo from "../../Logo";
@@ -90,13 +90,15 @@ class AppBarMobile extends React.Component<Props> {
               justify="flex-end"
               alignItems="center"
             >
-              <Button
-                variant="contained"
-                size="small"
-                className={classes.button}
-              >
-                EQUIRY NOW
-              </Button>
+              <Link href="/enquiry" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  size="small"
+                  className={classes.button}
+                >
+                  EQUIRY NOW
+                </Button>
+              </Link>
             </Grid>
           </Toolbar>
         </AppBar>

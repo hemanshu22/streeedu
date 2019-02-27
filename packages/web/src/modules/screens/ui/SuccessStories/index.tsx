@@ -8,6 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Grid from "@material-ui/core/Grid";
 import Screen from "../../../../utils/components/Screen";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -71,7 +72,9 @@ class SuccessStories extends React.Component<Props> {
     return (
       <Screen title="Our-team">
         <div>
-          <h2 className={classes.h1style}>SUCCESS STORIES</h2>
+          <Typography variant="headline" gutterBottom={true} align="center">
+            Success Stories
+          </Typography>
           <br />
           <Grid container={true} justify="center" spacing={8}>
             <Grid item={true} xs={12} sm={4}>
