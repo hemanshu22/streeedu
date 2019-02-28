@@ -6,13 +6,11 @@ import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
-import { Link } from "react-router-dom";
+import Link from "@material-ui/core/Link";
 
 const styles = (theme: any) =>
   createStyles({
     button: {
-      // margin: theme.spacing.unit,
-      // color: "#0052CC",
       paddingTop: "14px"
     },
     paper: {
@@ -61,48 +59,26 @@ class Academics extends React.Component<Props> {
           <Paper className={classes.paper}>
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
-                <Link
-                  to={{
-                    pathname: "/pccp"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/pccp" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>About PCCP</MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/key"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/key" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>Key Process</MenuItem>
                 </Link>
                 <Link
-                  to={{
-                    pathname: "/academicexcellence"
-                  }}
+                  href="/academicexcellence"
                   style={{ textDecoration: "none" }}
                 >
                   <MenuItem onClick={this.handleClose}>
                     Academic Excellence
                   </MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/innovative"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/innovative" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
                     Innovation & Continual Improvement
                   </MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/career"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/career" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
                     Admission/Career Counselling
                   </MenuItem>

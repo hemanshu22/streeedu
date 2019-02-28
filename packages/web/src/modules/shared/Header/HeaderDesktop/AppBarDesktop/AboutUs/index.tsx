@@ -7,8 +7,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
 // import { Link } from "react-router-dom";
-// import Link from "@material-ui/core/Link";
-import { Link } from "react-router-dom";
+import Link from "@material-ui/core/Link";
+// import { Link } from "react-router-dom";
 
 const styles = (theme: any) =>
   createStyles({
@@ -62,38 +62,18 @@ class AboutUs extends React.Component<Props> {
           <Paper className={classes.paper}>
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
-                <Link
-                  to={{
-                    pathname: "/aboutus"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/aboutus" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>About Us</MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/success"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/success" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
                     Success Stories
                   </MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/ourteam"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/ourteam" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>Our Team</MenuItem>
                 </Link>
-                <Link
-                  to={{
-                    pathname: "/faq"
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href="/faq" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>FAQ</MenuItem>
                 </Link>
               </MenuList>
