@@ -28,10 +28,7 @@ export const validEnquiryFormSchema = yup.object().shape({
     .string()
     .max(255)
     .required(),
-  parentname: yup
-    .string()
-    .max(255)
-    .required(),
+  parentname: yup.string().max(255),
   grade: yup
     .string()
     .max(255)

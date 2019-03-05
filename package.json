@@ -1,19 +1,6 @@
 {
   "private": true,
-  "scripts": {
-    "build:server": "lerna run build --scope={@abb/common,@abb/server}",
-    "build:web": "lerna run build --scope={@abb/common,@abb/controller,@abb/web}"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/rimraf",
-      "**/rimraf/**"
-    ]
-  },
-  "devDependencies": {
-    "lerna": "^3.13.0"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }
