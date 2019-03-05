@@ -76,66 +76,61 @@ class CardFive extends React.Component<Props> {
                 <Typography variant="subheading" component="h3">
                   Scientific Temperament
                 </Typography>
+                <br />
               </Grid>
-              <br />
+
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Mathematical Aptitude
                 </Typography>
+                <br />
               </Grid>
-            </Grid>
-            <Grid item={true} xs={12} sm={6} md={6} lg={6}>
-              <br />
             </Grid>
             <Grid container={true} direction="row">
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Problem Solving Attitude
                 </Typography>
+                <br />
               </Grid>
 
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Logical Reasoning
                 </Typography>
+                <br />
               </Grid>
-            </Grid>
-            <Grid item={true} xs={12} sm={6} md={6} lg={6}>
-              <br />
             </Grid>
             <Grid container={true} direction="row">
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Competitive Psychology
                 </Typography>
+                <br />
               </Grid>
-
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Self Confidence
                 </Typography>
+                <br />
               </Grid>
             </Grid>
-            {/* <br /> */}
-            <Grid item={true} xs={12} sm={6} md={6} lg={6}>
-              <br />
-            </Grid>
-
             <Grid container={true} direction="row">
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Exam Temperament
                 </Typography>
+                <br />
               </Grid>
               <Grid item={true} xs={12} sm={6} md={6} lg={6}>
                 <Typography variant="subheading" component="h3">
                   Time Management
                 </Typography>
+                <br />
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-        {/* </Grid> */}
       </div>
     );
   }

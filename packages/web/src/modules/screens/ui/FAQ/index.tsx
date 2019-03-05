@@ -34,11 +34,11 @@ class FAQ extends React.Component<
   }
 > {
   state = {
-    open1: true,
-    open2: true,
-    open3: true,
-    open4: true,
-    open5: true
+    open1: false,
+    open2: false,
+    open3: false,
+    open4: false,
+    open5: false
   };
 
   handleClick1 = () => {

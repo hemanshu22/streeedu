@@ -96,7 +96,7 @@ class AppBarMobile extends React.Component<Props> {
                   size="small"
                   className={classes.button}
                 >
-                  EQUIRY NOW
+                  EQUIRY
                 </Button>
               </Link>
             </Grid>

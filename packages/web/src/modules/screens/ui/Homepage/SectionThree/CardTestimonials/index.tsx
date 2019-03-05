@@ -14,7 +14,6 @@ const styles = (theme: any) =>
       borderTopStyle: "solid",
       transition: "box-shadow .5s",
       borderColor: "#5b4cd8",
-      // boxShadow: "5px 5px 5px 5px rgba(0,0,0,.05)",
       "&:hover": {
         boxShadow: "5px 5px 5px 5px rgba(0,0,0,.05)"
       }

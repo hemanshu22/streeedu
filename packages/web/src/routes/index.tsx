@@ -37,11 +37,6 @@ export const Routes = () => (
       <Route exact={true} path="/innovative" component={Innovations} />
       <Route exact={true} path="/career" component={Admissions} />
       <Route exact={true} path="/faq" component={FAQ} />
-      {/* <Route
-        exact={true}
-        path="/inactiveview"
-        component={InactiveViewConnector}
-      /> */}
     </Switch>
   </BrowserRouter>
 );

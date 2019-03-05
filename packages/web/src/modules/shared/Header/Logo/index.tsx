@@ -2,6 +2,7 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
+import Link from "@material-ui/core/Link";
 
 const styles = (theme: any) =>
   createStyles({
@@ -37,36 +38,40 @@ class Logo extends React.Component<Props> {
       <div>
         <Hidden only={["lg"]}>
           <Grid container={true} justify="center">
-            <Grid item={true} justify="center">
-              <img
-                src="http://www.streeedu.com/img/stree/logo.png"
-                alt="stree"
-                className={classes.stree}
-              />
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Grid item={true} justify="center">
+                <img
+                  src="http://www.streeedu.com/img/stree/logo.png"
+                  alt="stree"
+                  className={classes.stree}
+                />
 
-              <img
-                src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
-                alt="resonance home"
-                className={classes.resonance}
-              />
-            </Grid>
+                <img
+                  src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
+                  alt="resonance home"
+                  className={classes.resonance}
+                />
+              </Grid>
+            </Link>
           </Grid>
         </Hidden>
         <Hidden only={["xs", "sm", "md"]}>
           <Grid container={true} justify="center">
-            <Grid item={true} justify="center">
-              <img
-                src="http://www.streeedu.com/img/stree/logo.png"
-                alt="stree"
-                className={classes.stree}
-              />
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Grid item={true} justify="center">
+                <img
+                  src="http://www.streeedu.com/img/stree/logo.png"
+                  alt="stree"
+                  className={classes.stree}
+                />
 
-              <img
-                src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
-                alt="resonance home"
-                className={classes.resonance}
-              />
-            </Grid>
+                <img
+                  src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
+                  alt="resonance home"
+                  className={classes.resonance}
+                />
+              </Grid>
+            </Link>
           </Grid>
         </Hidden>
       </div>
