@@ -12,7 +12,8 @@ import Grid from "@material-ui/core/Grid";
 const styles = (theme: any) =>
   createStyles({
     root: {
-      flexGrow: 1
+      display: "flex",
+      flexDirection: "row"
     },
     grow: {
       flexGrow: 1
@@ -45,14 +46,13 @@ class AppBarDesktop extends React.Component<Props> {
         <AppBar position="fixed" className={classes.appbarcolor}>
           <Toolbar>
             <Grid container={true} direction="row">
-              <Grid item={true} sm={4} md={4} lg={4} className={classes.logo}>
+              <Grid item={true} sm={4} md={3} lg={4} className={classes.logo}>
                 <Logo />
               </Grid>
-
-              <Grid item={true} sm={1} md={1} lg={1} className={classes.grid}>
+              <Grid item={true} sm={1} md={2} lg={1} className={classes.grid}>
                 <AboutUs />
               </Grid>
-              <Grid item={true} sm={1} md={1} lg={1} className={classes.grid}>
+              <Grid item={true} sm={1} md={2} lg={1} className={classes.grid}>
                 <Courses />
               </Grid>
               <Grid item={true} sm={1} md={2} lg={2} className={classes.grid}>
@@ -61,13 +61,12 @@ class AppBarDesktop extends React.Component<Props> {
               {/*<Grid item={true} md={1} lg={1}>
                 <AboutUs />
               </Grid> */}
-
               {/* <Gallery />
             <Faq /> */}
               <Grid
                 item={true}
                 sm={4}
-                md={4}
+                md={3}
                 lg={4}
                 className={classes.enquiry}
               >
