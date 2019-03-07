@@ -11,7 +11,7 @@ import Link from "@material-ui/core/Link";
 const styles = (theme: any) =>
   createStyles({
     button: {
-      paddingTop: "14px"
+      margin: theme.spacing.unit
     },
     paper: {
       marginTop: "9px"

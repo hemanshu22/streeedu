@@ -6,25 +6,20 @@ const styles = (theme: any) =>
   createStyles({
     button: {
       margin: theme.spacing.unit
-      //  color: "#0052CC"
     }
   });
-
 interface Props extends WithStyles<typeof styles> {}
 class Courses extends React.Component<Props> {
   state = {
     open: false
   };
-
   handleToggle = (event: any) => {
     this.setState({
       open: event.currentTarget
     });
   };
-
   render() {
     const { classes } = this.props;
-
     return (
       <div>
         <Button className={classes.button} variant="text">

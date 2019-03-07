@@ -11,28 +11,15 @@ import Logo from "../../Logo";
 
 const styles = (theme: any) =>
   createStyles({
-    root: {
-      flex: 1,
-      justifyContent: "space-evenly"
-    },
-    grow: {
-      flexGrow: 1
-    },
-    appbarcolor: {
-      backgroundColor: "#fff",
-      top: 0,
-      bottom: "auto"
+    appbar: {
+      backgroundColor: "#fff"
     },
     enquiry: {
-      paddingTop: "7px"
-    },
-    logo: {
-      paddingLeft: "40px"
+      float: "right"
     },
     headercontainer: {
       display: "-webkit-box",
-      flex: 1,
-      flexDirection: "row"
+      listStyleType: "none"
     }
   });
 
@@ -44,30 +31,25 @@ class AppBarDesktop extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appbarcolor}>
-          <ul className={classes.headercontainer}>
-            <li>
-              <Logo />
-            </li>
-            <li>
-              <AboutUs />
-            </li>
-            <li>
-              <Courses />
-            </li>
-            <li>
-              <Academics />
-            </li>
-            <li style={{ alignSelf: "flex-end" }}>
-              <Enquiry />
-            </li>
-          </ul>
-        </AppBar>
-        <br />
-        <br />
-        <br />
-      </div>
+      <AppBar position="fixed" className={classes.appbar}>
+        <ul className={classes.headercontainer}>
+          <li>
+            <Logo />
+          </li>
+          <li>
+            <AboutUs />
+          </li>
+          <li>
+            <Courses />
+          </li>
+          <li>
+            <Academics />
+          </li>
+          <li className={classes.enquiry}>
+            <Enquiry />
+          </li>
+        </ul>
+      </AppBar>
     );
   }
 }
