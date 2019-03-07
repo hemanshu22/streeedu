@@ -1,20 +1,19 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+// import Toolbar from "@material-ui/core/Toolbar";
 import AboutUs from "./AboutUs";
 import Courses from "./Courses";
 import Academics from "./Academics";
 import Enquiry from "./Enquiry";
 import Logo from "../../Logo";
-import Grid from "@material-ui/core/Grid";
+// import Grid from "@material-ui/core/Grid";
 
 const styles = (theme: any) =>
   createStyles({
     root: {
-      flexGrow: 1
-      // display: "flex",
-      // flexDirection: "row"
+      flex: 1,
+      justifyContent: "space-evenly"
     },
     grow: {
       flexGrow: 1
@@ -24,14 +23,16 @@ const styles = (theme: any) =>
       top: 0,
       bottom: "auto"
     },
-    grid: {
-      // paddingTop: "10px"
-    },
     enquiry: {
       paddingTop: "7px"
     },
     logo: {
       paddingLeft: "40px"
+    },
+    headercontainer: {
+      display: "-webkit-box",
+      flex: 1,
+      flexDirection: "row"
     }
   });
 
@@ -45,41 +46,27 @@ class AppBarDesktop extends React.Component<Props> {
     return (
       <div className={classes.root}>
         <AppBar position="fixed" className={classes.appbarcolor}>
-          <Toolbar>
-            <Grid container={true} direction="row">
-              <Grid item={true} sm={4} md={3} lg={4} className={classes.logo}>
-                <Logo />
-              </Grid>
-              <Grid item={true} sm={1} md={2} lg={1} className={classes.grid}>
-                <AboutUs />
-              </Grid>
-              <Grid item={true} sm={1} md={2} lg={1} className={classes.grid}>
-                <Courses />
-              </Grid>
-              <Grid item={true} sm={1} md={2} lg={2} className={classes.grid}>
-                <Academics />
-              </Grid>
-              {/*<Grid item={true} md={1} lg={1}>
-                <AboutUs />
-              </Grid> */}
-              {/* <Gallery />
-            <Faq /> */}
-              <Grid
-                item={true}
-                sm={4}
-                md={3}
-                lg={4}
-                className={classes.enquiry}
-              >
-                <Enquiry />
-              </Grid>
-            </Grid>
-          </Toolbar>
+          <ul className={classes.headercontainer}>
+            <li>
+              <Logo />
+            </li>
+            <li>
+              <AboutUs />
+            </li>
+            <li>
+              <Courses />
+            </li>
+            <li>
+              <Academics />
+            </li>
+            <li style={{ alignSelf: "flex-end" }}>
+              <Enquiry />
+            </li>
+          </ul>
         </AppBar>
         <br />
         <br />
         <br />
-        {/* <br /> */}
       </div>
     );
   }
