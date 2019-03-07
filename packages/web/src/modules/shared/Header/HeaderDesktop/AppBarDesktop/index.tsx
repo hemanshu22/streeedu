@@ -12,8 +12,9 @@ import Grid from "@material-ui/core/Grid";
 const styles = (theme: any) =>
   createStyles({
     root: {
-      display: "flex",
-      flexDirection: "row"
+      flexGrow: 1
+      // display: "flex",
+      // flexDirection: "row"
     },
     grow: {
       flexGrow: 1
@@ -24,7 +25,7 @@ const styles = (theme: any) =>
       bottom: "auto"
     },
     grid: {
-      paddingTop: "10px"
+      // paddingTop: "10px"
     },
     enquiry: {
       paddingTop: "7px"
