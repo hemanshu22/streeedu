@@ -19,7 +19,7 @@ const styles = (theme: any) =>
   });
 
 interface Props extends WithStyles<typeof styles> {}
-class Academics extends React.Component<Props> {
+class ContactUs extends React.Component<Props> {
   state = {
     anchorEl: null
   };
@@ -33,6 +33,7 @@ class Academics extends React.Component<Props> {
       anchorEl: null
     });
   };
+
   render() {
     const { classes } = this.props;
     const { anchorEl } = this.state;
@@ -45,7 +46,7 @@ class Academics extends React.Component<Props> {
           className={classes.button}
           onClick={this.handleToggle}
         >
-          Academics
+          Contact Us
         </Button>
         <Popper
           open={open}
@@ -59,35 +60,11 @@ class Academics extends React.Component<Props> {
           <Paper className={classes.paper}>
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
-                {/* <Link href="/pccp" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>About PCCP</MenuItem>
-                </Link> */}
-                {/* <Link href="/key" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Key Process</MenuItem>
-                </Link> */}
-                <Link
-                  href="/academicexcellence"
-                  style={{ textDecoration: "none" }}
-                >
-                  <MenuItem onClick={this.handleClose}>
-                    Academic Excellence
-                  </MenuItem>
+                <Link href="/address" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={this.handleClose}>Adresses</MenuItem>
                 </Link>
-                <Link
-                  href="/examinformation"
-                  style={{ textDecoration: "none" }}
-                >
-                  <MenuItem onClick={this.handleClose}>
-                    Exam Information
-                  </MenuItem>
-                </Link>
-                <Link href="/methodology" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>
-                    Teaching Methodology
-                  </MenuItem>
-                </Link>
-                <Link href="/analysis" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Test Analysis</MenuItem>
+                <Link href="/faq" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={this.handleClose}>FAQ</MenuItem>
                 </Link>
               </MenuList>
             </ClickAwayListener>
@@ -97,4 +74,4 @@ class Academics extends React.Component<Props> {
     );
   }
 }
-export default withStyles(styles)(Academics);
+export default withStyles(styles)(ContactUs);

@@ -7,7 +7,7 @@ const styles = (theme: any) =>
   createStyles({
     cardinner: {
       padding: "15px",
-      backgroundColor: "#303c42"
+      backgroundColor: "#86576b"
     },
     footer: {
       color: "#fff"
@@ -29,18 +29,37 @@ class ContactFooter extends React.Component<Props> {
           gutterBottom={true}
           className={classes.footer}
         >
-          Contact
+          Contact Us
         </Typography>
         <Typography
           variant="body2"
           gutterBottom={true}
           className={classes.footer}
         >
-          <b> +971 4 397 7777</b> <br />
-          <b> +971 588 488 127 </b> <br />
-          <b> +971 588 488 128</b> <br />
-          <b> +971 588 488 129</b> <br />
-          <b> cc.resonance@stree.ae</b> <br />
+          Phone No.
+        </Typography>
+        <Typography
+          variant="body2"
+          gutterBottom={true}
+          className={classes.footer}
+        >
+          +971 4 397 7777, <br />
+          +971 588 488 129
+        </Typography>
+        <br />
+        <Typography
+          variant="body2"
+          gutterBottom={true}
+          className={classes.footer}
+        >
+          Email
+        </Typography>
+        <Typography
+          variant="body2"
+          gutterBottom={true}
+          className={classes.footer}
+        >
+          cc.resonance@stree.ae
         </Typography>
       </div>
     );

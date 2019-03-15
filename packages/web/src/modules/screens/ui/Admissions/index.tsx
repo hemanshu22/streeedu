@@ -25,11 +25,10 @@ class Admissions extends React.Component<Props> {
     return (
       <Screen title="AboutPccp">
         <div>
-          <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10}>
-              <Typography variant="h6" gutterBottom={true}>
-                <b>ADMISSION /CAREER COUNSELING</b>
+              <Typography variant="headline" gutterBottom={true} align="center">
+                ADMISSION /CAREER COUNSELING
               </Typography>
             </Grid>
           </Grid>
@@ -37,37 +36,8 @@ class Admissions extends React.Component<Props> {
           <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
-              <Typography
-                variant="title"
-                gutterBottom={true}
-                className={classes.h1Style}
-              >
-                <b>1. PCCP :</b>
-              </Typography>
-            </Grid>
-            <Grid item={true} sm={10}>
-              <Typography
-                variant="caption"
-                gutterBottom={true}
-                style={{ fontSize: "15px" }}
-              >
-                Visitors / students are counselled about the admission
-                eligibility ,process , fees , test patterns , and academic
-                syllabus.
-              </Typography>
-            </Grid>
-          </Grid>
-
-          <br />
-          <br />
-          <Grid container={true} spacing={8} className={classes.grid_cen}>
-            <Grid item={true} sm={10} xs={12}>
-              <Typography
-                variant="title"
-                gutterBottom={true}
-                className={classes.h1Style}
-              >
-                <b> 2. Key features of the organization :</b>
+              <Typography variant="title" gutterBottom={true}>
+                PCCP
               </Typography>
             </Grid>
             <Grid item={true} sm={10}>
@@ -86,12 +56,28 @@ class Admissions extends React.Component<Props> {
           <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
+              <Typography variant="title" gutterBottom={true}>
+                Key features of the organization
+              </Typography>
+            </Grid>
+            <Grid item={true} sm={10}>
               <Typography
-                variant="title"
+                variant="caption"
                 gutterBottom={true}
-                className={classes.h1Style}
+                style={{ fontSize: "15px" }}
               >
-                <b>3. Results and achievements :</b>
+                Visitors / students are counselled about the admission
+                eligibility ,process , fees , test patterns , and academic
+                syllabus.
+              </Typography>
+            </Grid>
+          </Grid>
+          <br />
+          <br />
+          <Grid container={true} spacing={8} className={classes.grid_cen}>
+            <Grid item={true} sm={10} xs={12}>
+              <Typography variant="title" gutterBottom={true}>
+                Results and achievements
               </Typography>
             </Grid>
             <Grid item={true} sm={10}>
@@ -108,12 +94,8 @@ class Admissions extends React.Component<Props> {
           <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
-              <Typography
-                variant="title"
-                gutterBottom={true}
-                className={classes.h1Style}
-              >
-                <b>4. Career stream selection :</b>
+              <Typography variant="title" gutterBottom={true}>
+                Career stream selection
               </Typography>
             </Grid>
             <Grid item={true} sm={10}>
@@ -132,12 +114,8 @@ class Admissions extends React.Component<Props> {
 
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
-              <Typography
-                variant="title"
-                gutterBottom={true}
-                className={classes.h1Style}
-              >
-                <b>5. Performance</b>
+              <Typography variant="title" gutterBottom={true}>
+                Performance
               </Typography>
             </Grid>
             <Grid item={true} sm={10} xs={12}>
@@ -156,12 +134,8 @@ class Admissions extends React.Component<Props> {
 
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
-              <Typography
-                variant="title"
-                gutterBottom={true}
-                className={classes.h1Style}
-              >
-                <b>6. Wide spectrum of competitive exams :</b>
+              <Typography variant="title" gutterBottom={true}>
+                Wide spectrum of competitive exams
               </Typography>
             </Grid>
             <Grid item={true} sm={10} xs={12}>

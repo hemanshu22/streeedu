@@ -7,9 +7,13 @@ const styles = (theme: any) =>
   createStyles({
     cardinner: {
       padding: "15px",
-      backgroundColor: "#303c42"
+      backgroundColor: "#86576b"
     },
-    footer: { color: "#fff" }
+    footer: { color: "#fff" },
+    divider: {
+      backgroundColor: "rgba(243, 243, 247, 0.94)",
+      height: "2px"
+    }
   });
 
 interface Props extends WithStyles<typeof styles> {}
@@ -31,35 +35,46 @@ class OfficeAddress extends React.Component<Props> {
           Office locations
         </Typography>
         <Typography
-          variant="body1"
+          variant="body2"
           gutterBottom={true}
           className={classes.footer}
         >
-          <b>STREE Training Center</b>
+          STREE Training Center
         </Typography>
         <Typography
           variant="caption"
           gutterBottom={true}
           className={classes.footer}
         >
-          #102 & 104, Arenco Building Block -B ,<br /> Zabeel Road , Karama ,
-          Dubai ( UAE ).
+          #102 & 104, Arenco Building Block -B,
+          <br /> Zabeel Road, Karama, Dubai (UAE).
         </Typography>
-        <Divider />
-        <Typography
-          variant="body1"
+        <Divider className={classes.divider} />
+        <br />
+        {/* <Typography
+          variant="body2"
           gutterBottom={true}
           className={classes.footer}
         >
-          <b>STREE Education Head Office</b>
-        </Typography>
+          STREE Education Head Office
+        </Typography> */}
         <Typography
           variant="caption"
           gutterBottom={true}
           className={classes.footer}
         >
           Sheikh Rashid Road,Garhoud,
-          <br /> Dubai(UAE).
+          <br /> Dubai (UAE).
+        </Typography>
+        <Divider className={classes.divider} />
+        <br />
+        <Typography
+          variant="caption"
+          gutterBottom={true}
+          className={classes.footer}
+        >
+          #504, Seven Heaven Building, <br />
+          King Abdul Aziz Street, Sharjah (UAE).
         </Typography>
       </div>
     );

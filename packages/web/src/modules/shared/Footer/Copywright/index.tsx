@@ -5,8 +5,8 @@ import Typography from "@material-ui/core/Typography";
 const styles = (theme: any) =>
   createStyles({
     cardinner: {
-      padding: "15px"
-      //  backgroundColor: "#303c42"
+      padding: "15px",
+      backgroundColor: "#694253"
     },
     copywright: { color: "#fff" }
   });

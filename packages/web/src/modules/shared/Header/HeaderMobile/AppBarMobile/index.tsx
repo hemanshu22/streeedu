@@ -3,13 +3,8 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-// import Avatar from "@material-ui/core/Avatar";
-// import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import MobileDrawer from "../MobileDrawer";
-// import AboutUs from "./Menu/AboutUs";
-// import Courses from "./Menu/Courses";
-// import Academics from "./Menu/Academics";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -38,7 +33,7 @@ const styles = (theme: any) =>
       color: "#000"
     },
     button: {
-      backgroundColor: "#0052CC",
+      backgroundColor: "#86576b",
       color: "#fff",
       fontWeight: "bold",
       fontFamily:
@@ -96,9 +91,19 @@ class AppBarMobile extends React.Component<Props> {
                   size="small"
                   className={classes.button}
                 >
-                  EQUIRY
+                  ENQUIRY
                 </Button>
               </Link>
+              &nbsp;
+              {/* <Link href="/workshop" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  size="small"
+                  className={classes.button}
+                >
+                  WORKSHOP
+                </Button>
+              </Link> */}
             </Grid>
           </Toolbar>
         </AppBar>

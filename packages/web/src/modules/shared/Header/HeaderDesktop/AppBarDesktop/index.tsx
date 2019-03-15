@@ -1,25 +1,24 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-// import Toolbar from "@material-ui/core/Toolbar";
 import AboutUs from "./AboutUs";
 import Courses from "./Courses";
 import Academics from "./Academics";
+import Gallery from "./Gallery";
+import ContactUs from "./ContactUs";
 import Enquiry from "./Enquiry";
-import Logo from "../../Logo";
-// import Grid from "@material-ui/core/Grid";
+// import Workshop from "./Workshop";
 
 const styles = (theme: any) =>
   createStyles({
     appbar: {
       backgroundColor: "#fff"
     },
-    enquiry: {
-      float: "right"
-    },
     headercontainer: {
-      display: "-webkit-box",
-      listStyleType: "none"
+      display: "flex",
+      listStyleType: "none",
+      paddingLeft: "0px",
+      marginBottom: "4px",
+      marginTop: "-11px"
     }
   });
 
@@ -31,25 +30,29 @@ class AppBarDesktop extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="fixed" className={classes.appbar}>
-        <ul className={classes.headercontainer}>
-          <li>
-            <Logo />
-          </li>
-          <li>
-            <AboutUs />
-          </li>
-          <li>
-            <Courses />
-          </li>
-          <li>
-            <Academics />
-          </li>
-          <li className={classes.enquiry}>
-            <Enquiry />
-          </li>
-        </ul>
-      </AppBar>
+      <ul className={classes.headercontainer}>
+        <li>
+          <AboutUs />
+        </li>
+        <li>
+          <Academics />
+        </li>
+        <li>
+          <Courses />
+        </li>
+        <li>
+          <Gallery />
+        </li>
+        <li style={{ flexGrow: 1 }}>
+          <ContactUs />
+        </li>
+        <li>
+          <Enquiry />
+        </li>
+        {/* <li>
+          <Workshop />
+        </li> */}
+      </ul>
     );
   }
 }
