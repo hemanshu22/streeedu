@@ -1,35 +1,25 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+// import Toolbar from "@material-ui/core/Toolbar";
 import AboutUs from "./AboutUs";
 import Courses from "./Courses";
 import Academics from "./Academics";
 import Enquiry from "./Enquiry";
 import Logo from "../../Logo";
-import Grid from "@material-ui/core/Grid";
+// import Grid from "@material-ui/core/Grid";
 
 const styles = (theme: any) =>
   createStyles({
-    root: {
-      flexGrow: 1
-    },
-    grow: {
-      flexGrow: 1
-    },
-    appbarcolor: {
-      backgroundColor: "#fff",
-      top: 0,
-      bottom: "auto"
-    },
-    grid: {
-      paddingTop: "10px"
+    appbar: {
+      backgroundColor: "#fff"
     },
     enquiry: {
-      paddingTop: "7px"
+      float: "right"
     },
-    logo: {
-      paddingLeft: "40px"
+    headercontainer: {
+      display: "-webkit-box",
+      listStyleType: "none"
     }
   });
 
@@ -41,46 +31,25 @@ class AppBarDesktop extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appbarcolor}>
-          <Toolbar>
-            <Grid container={true} direction="row">
-              <Grid item={true} sm={4} md={4} lg={4} className={classes.logo}>
-                <Logo />
-              </Grid>
-
-              <Grid item={true} sm={1} md={1} lg={1} className={classes.grid}>
-                <AboutUs />
-              </Grid>
-              <Grid item={true} sm={1} md={1} lg={1} className={classes.grid}>
-                <Courses />
-              </Grid>
-              <Grid item={true} sm={1} md={2} lg={2} className={classes.grid}>
-                <Academics />
-              </Grid>
-              {/*<Grid item={true} md={1} lg={1}>
-                <AboutUs />
-              </Grid> */}
-
-              {/* <Gallery />
-            <Faq /> */}
-              <Grid
-                item={true}
-                sm={4}
-                md={4}
-                lg={4}
-                className={classes.enquiry}
-              >
-                <Enquiry />
-              </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>
-        <br />
-        <br />
-        <br />
-        {/* <br /> */}
-      </div>
+      <AppBar position="fixed" className={classes.appbar}>
+        <ul className={classes.headercontainer}>
+          <li>
+            <Logo />
+          </li>
+          <li>
+            <AboutUs />
+          </li>
+          <li>
+            <Courses />
+          </li>
+          <li>
+            <Academics />
+          </li>
+          <li className={classes.enquiry}>
+            <Enquiry />
+          </li>
+        </ul>
+      </AppBar>
     );
   }
 }

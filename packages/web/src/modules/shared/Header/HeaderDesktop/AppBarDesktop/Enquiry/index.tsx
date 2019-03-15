@@ -10,7 +10,7 @@ const styles = (theme: any) =>
       color: "#0052CC"
     },
     enquiry: {
-      textAlign: "right"
+      //  textAlign: "right"
     }
   });
 
