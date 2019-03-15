@@ -3,14 +3,10 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import CardOne from "./CardOne";
-// import CardTwo from "./CardTwo";
-// import CardThree from "./CardThree";
 import CardFour from "./CardFour";
 import CardFive from "./CardFive";
 import CardSix from "./CardSix";
-// import CardResult from "./CardResult";
 import CardTestimonials from "./CardTestimonials";
-// import { EnquiryFormConnector } from "../../../connectors/EnquiryFormConnector";
 import resultimage from "../../../../../utils/img/result.jpg";
 
 const data1 = [
