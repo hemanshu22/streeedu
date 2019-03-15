@@ -25,12 +25,13 @@ import { container } from "../../../utils/jss/material-kit-react.jsx";
 import image from "../../../utils/img/sign.jpg";
 // import Select from "../../shared/selectField";
 // import InputLabel from "@material-ui/core/InputLabel";
-
 import { withFormik, FormikErrors, FormikProps, Field, Form } from "formik";
 import { validWorkshopFormSchema } from "@abb/common";
 import { createStyles } from "@material-ui/core";
 // import { compose } from "react-apollo";
 // import profileImage from "../../../utils/img/faces/avatar.jpg";
+import { Loader as MyLoader } from "../../../utils/components/Loader";
+import { AlertDialog } from "../../../utils/components/Alert";
 
 interface FormValues {
   name: string;
@@ -43,6 +44,13 @@ interface FormValues {
 
 interface Props extends WithStyles<typeof loginStyle> {
   submit: (values: FormValues) => Promise<FormikErrors<FormValues> | null>;
+  showAlert: (msg: any) => any;
+  hideAlert: () => any;
+  showLoader: () => any;
+  hideLoader: () => any;
+  alert: any;
+  loader: any;
+  msg: any;
 }
 const loginStyle = () =>
   createStyles({
@@ -282,6 +290,13 @@ class SectionLogin extends React.Component<FormikProps<FormValues> & Props> {
               </Card>
             </GridItem>
           </GridContainer>
+          {this.props.loader && <MyLoader />}
+          {this.props.alert && (
+            <AlertDialog
+              hideAlert={this.props.hideAlert}
+              message={this.props.msg}
+            />
+          )}
         </div>
       </div>
     );
@@ -298,13 +313,20 @@ const Comp = withFormik<Props, FormValues>({
     area: "",
     mobile: ""
   }),
-  handleSubmit: async (values, { props, setErrors }) => {
-    console.log("test");
-    console.log(values);
-    console.log(props);
+  handleSubmit: async (values, { props, setErrors, resetForm }) => {
+    props.showLoader();
     const errors = await props.submit(values);
+
     if (errors) {
+      console.log(errors);
+      props.hideLoader();
       setErrors(errors);
+    } else {
+      props.hideLoader();
+      props.showAlert(
+        "Thanks For Registration. We have sent email having workshop details and registration number"
+      );
+      resetForm();
     }
   }
 })(SectionLogin);

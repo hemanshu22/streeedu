@@ -67,6 +67,7 @@ declare namespace GQL {
   interface IEnquiryOnMutationArguments {
     name: string;
     email: string;
+    parentname: string;
     school: string;
     mobile: string;
     area: string;
