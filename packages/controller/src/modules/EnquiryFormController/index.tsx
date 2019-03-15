@@ -1,21 +1,50 @@
 import * as React from "react";
 import { graphql, ChildMutateProps } from "react-apollo";
 import gql from "graphql-tag";
+import { normalizeErrors } from "../../utils/normalizeErrors";
+import { NormalizedErrorMap } from "../../types/NormalizedErrorMap";
+
+interface EnquiryMutation_enquiry {
+  path: string;
+  message: string;
+}
+
+interface EnquiryMutation {
+  enquiryform: EnquiryMutation_enquiry[] | null;
+}
+
+interface EnquiryMutationVariables {
+  name: string;
+  email: string;
+  parentname: string;
+  school: string;
+  area: string;
+  mobile: string;
+  grade: string;
+  enquiry: string;
+}
 
 interface Props {
   children: (data: {
-    submit: (values: any) => Promise<null>;
+    submit: (
+      values: EnquiryMutationVariables
+    ) => Promise<NormalizedErrorMap | null>;
   }) => JSX.Element | null;
 }
 
-class C extends React.PureComponent<ChildMutateProps<Props, any, any>> {
-  submit = async (values: any) => {
-    console.log(values);
-    console.log(this.props);
-    const response = await this.props.mutate({
+class C extends React.PureComponent<
+  ChildMutateProps<Props, EnquiryMutation, EnquiryMutationVariables>
+> {
+  submit = async (values: EnquiryMutationVariables) => {
+    const {
+      data: { enquiryform }
+    } = await this.props.mutate({
       variables: values
     });
-    console.log("response: ", response);
+    console.log("response: ", enquiryform);
+    if (enquiryform) {
+      return normalizeErrors(enquiryform);
+    }
     return null;
   };
 

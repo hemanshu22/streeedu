@@ -1,21 +1,52 @@
 import * as React from "react";
 import { graphql, ChildMutateProps } from "react-apollo";
 import gql from "graphql-tag";
+import { normalizeErrors } from "../../utils/normalizeErrors";
+import { NormalizedErrorMap } from "../../types/NormalizedErrorMap";
+
+interface RegisterMutation_register {
+  path: string;
+  message: string;
+}
+
+interface RegisterMutation {
+  workshop: RegisterMutation_register[] | null;
+}
+
+interface RegisterMutationVariables {
+  name: string;
+  email: string;
+  classs: string;
+  school: string;
+  area: string;
+  mobile: string;
+}
 
 interface Props {
   children: (data: {
-    submit: (values: any) => Promise<null>;
+    submit: (
+      values: RegisterMutationVariables
+    ) => Promise<NormalizedErrorMap | null>;
   }) => JSX.Element | null;
 }
 
-class C extends React.PureComponent<ChildMutateProps<Props, any, any>> {
-  submit = async (values: any) => {
+class C extends React.PureComponent<
+  ChildMutateProps<Props, RegisterMutation, RegisterMutationVariables>
+> {
+  submit = async (values: RegisterMutationVariables) => {
     console.log(values);
     console.log(this.props);
-    const response = await this.props.mutate({
+    const {
+      data: { workshop }
+    } = await this.props.mutate({
       variables: values
     });
-    console.log("response: ", response);
+    console.log("response: ", workshop);
+
+    if (workshop) {
+      return normalizeErrors(workshop);
+    }
+
     return null;
   };
 
