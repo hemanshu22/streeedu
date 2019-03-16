@@ -19,6 +19,6 @@ export class Workshop extends BaseEntity {
   @Column("varchar", { length: 255 })
   area: string;
 
-  @Column("varchar", { length: 15 })
-  mobile: string;
+  @Column("int")
+  mobile: number;
 }

@@ -32,7 +32,7 @@ interface FormValues {
   school: string;
   parentname: string;
   area: string;
-  mobile: string;
+  mobile: number;
   grade: string;
   enquiry: string;
 }
@@ -47,7 +47,7 @@ interface Props extends WithStyles<typeof loginStyle> {
   loader: any;
   msg: any;
 }
-const loginStyle = () =>
+const loginStyle = (theme: any) =>
   createStyles({
     section: {
       minHeight: "110vh",
@@ -311,7 +311,7 @@ const Comp = withFormik<Props, FormValues>({
     school: "",
     parentname: "",
     area: "",
-    mobile: "",
+    mobile: 0,
     grade: "",
     enquiry: ""
   }),

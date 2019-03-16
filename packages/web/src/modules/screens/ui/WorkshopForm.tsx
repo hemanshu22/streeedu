@@ -1,15 +1,10 @@
 import * as React from "react";
-// @material-ui/core components
 import withStyles, { WithStyles } from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
-// import { InputField } from "../../shared/inputField";
-// import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
 import Person from "@material-ui/icons/Person";
 import Email from "@material-ui/icons/Email";
 import School from "@material-ui/icons/School";
 import SmartPhone from "@material-ui/icons/Smartphone";
-// core components
 import GridContainer from "../../../utils/components/Grid/GridContainer.jsx";
 import GridItem from "../../../utils/components/Grid/GridItem.jsx";
 import Card from "../../../utils/components/Card/Card.jsx";
@@ -17,21 +12,16 @@ import CardHeader from "../../../utils/components/Card/CardHeader.jsx";
 import CardBody from "../../../utils/components/Card/CardBody.jsx";
 import CardFooter from "../../../utils/components/Card/CardFooter.jsx";
 import Button from "@material-ui/core/Button";
-// import Button from "../../../utils/components/CustomButtons/Button.jsx";
 import CustomInput from "../../../utils/components/CustomInput/CustomInput.jsx";
 import CustomSelect from "../../../utils/components/CustomSelect/CustomSelect.jsx";
-// import CustomDropdown from "../../../utils/components/CustomDropdown/CustomDropdown.jsx";
 import { container } from "../../../utils/jss/material-kit-react.jsx";
 import image from "../../../utils/img/sign.jpg";
-// import Select from "../../shared/selectField";
-// import InputLabel from "@material-ui/core/InputLabel";
 import { withFormik, FormikErrors, FormikProps, Field, Form } from "formik";
 import { validWorkshopFormSchema } from "@abb/common";
 import { createStyles } from "@material-ui/core";
-// import { compose } from "react-apollo";
-// import profileImage from "../../../utils/img/faces/avatar.jpg";
 import { Loader as MyLoader } from "../../../utils/components/Loader";
 import { AlertDialog } from "../../../utils/components/Alert";
+import Typography from "@material-ui/core/Typography";
 
 interface FormValues {
   name: string;
@@ -39,7 +29,7 @@ interface FormValues {
   school: string;
   classs: string;
   area: string;
-  mobile: string;
+  mobile: number;
 }
 
 interface Props extends WithStyles<typeof loginStyle> {
@@ -52,7 +42,7 @@ interface Props extends WithStyles<typeof loginStyle> {
   loader: any;
   msg: any;
 }
-const loginStyle = () =>
+const loginStyle = (theme: any) =>
   createStyles({
     section: {
       minHeight: "110vh",
@@ -134,46 +124,16 @@ class SectionLogin extends React.Component<FormikProps<FormValues> & Props> {
               <Card>
                 <Form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Register For Free Workshop</h4>
-                    {/* <div className={classes.socialLine}>
-                      <Button
-                        justIcon={true}
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={classes.socialIcons + " fab fa-twitter"}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={classes.socialIcons + " fab fa-facebook"}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={
-                            classes.socialIcons + " fab fa-google-plus-g"
-                          }
-                        />
-                      </Button>
-                    </div> */}
+                    <Typography
+                      component="h2"
+                      variant="title"
+                      gutterBottom={true}
+                      style={{ color: "white" }}
+                    >
+                      Register For Free Workshop
+                    </Typography>
                   </CardHeader>
-                  {/* <p className={classes.divider}>Or Be Classical</p> */}
+
                   <CardBody>
                     <Field
                       labelText="Name"
@@ -305,14 +265,7 @@ class SectionLogin extends React.Component<FormikProps<FormValues> & Props> {
 
 const Comp = withFormik<Props, FormValues>({
   validationSchema: validWorkshopFormSchema,
-  mapPropsToValues: () => ({
-    name: "",
-    email: "",
-    school: "",
-    classs: "",
-    area: "",
-    mobile: ""
-  }),
+
   handleSubmit: async (values, { props, setErrors, resetForm }) => {
     props.showLoader();
     const errors = await props.submit(values);

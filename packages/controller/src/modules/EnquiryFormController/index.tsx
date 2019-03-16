@@ -19,7 +19,7 @@ interface EnquiryMutationVariables {
   parentname: string;
   school: string;
   area: string;
-  mobile: string;
+  mobile: number;
   grade: string;
   enquiry: string;
 }
@@ -60,7 +60,7 @@ const enquiryMutation = gql`
     $parentname: String!
     $school: String!
     $area: String!
-    $mobile: String!
+    $mobile: Int!
     $grade: String!
     $enquiry: String!
   ) {

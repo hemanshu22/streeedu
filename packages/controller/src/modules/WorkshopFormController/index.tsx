@@ -19,7 +19,7 @@ interface RegisterMutationVariables {
   classs: string;
   school: string;
   area: string;
-  mobile: string;
+  mobile: number;
 }
 
 interface Props {
@@ -62,7 +62,7 @@ const workshopMutation = gql`
     $classs: String!
     $school: String!
     $area: String!
-    $mobile: String!
+    $mobile: Int!
   ) {
     workshop(
       name: $name
