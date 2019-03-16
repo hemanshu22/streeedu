@@ -232,7 +232,7 @@ class SectionLogin extends React.Component<FormikProps<FormValues> & Props> {
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "text",
+                        type: "number",
                         endAdornment: (
                           <InputAdornment position="end">
                             <SmartPhone className={classes.inputIconsColor} />

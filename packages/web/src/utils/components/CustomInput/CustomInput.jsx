@@ -9,7 +9,7 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import customInputStyle from "../../jss/material-kit-react/components/customInputStyle.jsx";
-
+import "./CustomInput.css";
 function CustomInput({ field, form: { touched, errors }, ...props }) {
   const {
     classes,
