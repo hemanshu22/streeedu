@@ -1,5 +1,6 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
+import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Courses from "./Courses";
 import Academics from "./Academics";
@@ -31,6 +32,9 @@ class AppBarDesktop extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <ul className={classes.headercontainer}>
+        <li style={{ margin: "5px" }}>
+          <Home />
+        </li>
         <li>
           <AboutUs />
         </li>

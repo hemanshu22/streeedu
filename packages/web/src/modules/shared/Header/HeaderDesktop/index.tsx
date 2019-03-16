@@ -3,7 +3,7 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import AppBarDesktop from "./AppBarDesktop";
 import Logo from "../Logo";
-// import Divider from "@material-ui/core/Divider";
+import Divider from "@material-ui/core/Divider";
 
 const styles = (theme: any) =>
   createStyles({
@@ -29,8 +29,8 @@ class HeaderDesktop extends React.Component<Props> {
     return (
       <AppBar position="fixed" className={classes.appbar}>
         <Logo />
-        {/* <Divider /> */}
-        {/* <br /> */}
+        <Divider />
+        <br />
         <AppBarDesktop />
       </AppBar>
     );

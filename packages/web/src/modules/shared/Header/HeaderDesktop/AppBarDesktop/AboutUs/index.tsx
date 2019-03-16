@@ -40,7 +40,7 @@ class AboutUs extends React.Component<Props> {
     const open = Boolean(anchorEl);
     return (
       <div>
-        &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+        {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
         <Button
           aria-owns={open ? "menu-list-grow" : undefined}
           aria-haspopup="true"

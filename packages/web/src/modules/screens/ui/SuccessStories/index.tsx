@@ -9,6 +9,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import Grid from "@material-ui/core/Grid";
 import Screen from "../../../../utils/components/Screen";
 import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) =>
   createStyles({
@@ -85,9 +86,18 @@ class SuccessStories extends React.Component<Props> {
     return (
       <Screen title="Success Stories">
         <div>
-          <Typography variant="headline" gutterBottom={true} align="center">
-            Success Stories
-          </Typography>
+          <Hidden only={["lg"]}>
+            <Typography variant="headline" gutterBottom={true} align="center">
+              Success Stories
+            </Typography>
+          </Hidden>
+          <Hidden only={["xs", "sm", "md"]}>
+            <br />
+            <br />
+            <Typography variant="headline" gutterBottom={true} align="center">
+              Success Stories
+            </Typography>
+          </Hidden>
           <br />
           <Grid container={true} justify="center" spacing={8}>
             <Grid item={true} xs={12} sm={4}>
@@ -170,15 +180,15 @@ class SuccessStories extends React.Component<Props> {
           <Dialog
             open={this.state.open1}
             onClose={this.handleClose1}
-            aria-labelledby="form-dialog-title"
+            aria-labelledby="responsive-dialog-title"
           >
             <DialogContent>
-              <DialogContentText>
-                <img
-                  className={classes.imgstyle}
-                  src="http://www.streeedu.com/img/stree/Resonancesuccess.jpg"
-                />
-              </DialogContentText>
+              {/* <DialogContentText> */}
+              <img
+                className={classes.imgstyle}
+                src="http://www.streeedu.com/img/stree/Resonancesuccess.jpg"
+              />
+              {/* </DialogContentText> */}
             </DialogContent>
             <DialogActions>
               <Button onClick={this.handleClose1} color="primary">

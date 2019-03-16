@@ -20,7 +20,10 @@ const styles = (theme: any) =>
     },
     avatar: {
       width: "150px",
-      height: "150px"
+      height: "150px",
+      zIndex: 1,
+      top: 73,
+      margin: "0 auto"
     },
     div: {
       padding: "5px"
@@ -47,15 +50,16 @@ class CardTestimonials extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <div className={classes.div} style={{ textAlign: "center" }}>
-        <div>
-          <Avatar
-            alt="Remy Sharp"
-            className={classes.avatar}
-            src="https://material-ui.com//static/images/avatar/1.jpg"
-            style={{ bottom: "-77px" }}
-          />
-        </div>
+        <Avatar
+          alt="Remy Sharp"
+          className={classes.avatar}
+          src="https://material-ui.com//static/images/avatar/1.jpg"
+        />
         <Paper elevation={3} className={classes.paper}>
+          <br />
+          <br />
+          <br />
+          <br />
           <Typography variant="body2" component="h3">
             {this.props.name}
           </Typography>
