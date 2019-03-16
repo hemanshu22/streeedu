@@ -143,45 +143,8 @@ class SectionLogin extends React.Component<
                     >
                       ENQUIRY FORM
                     </Typography>
-                    {/* <div className={classes.socialLine}>
-                      <Button
-                        justIcon={true}
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={classes.socialIcons + " fab fa-twitter"}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={classes.socialIcons + " fab fa-facebook"}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e: any) => e.preventDefault()}
-                      >
-                        <i
-                          className={
-                            classes.socialIcons + " fab fa-google-plus-g"
-                          }
-                        />
-                      </Button>
-                    </div> */}
                   </CardHeader>
-                  {/* <p className={classes.divider}>Or Be Classical</p> */}
+
                   <CardBody>
                     <Field
                       labelText="Name"
@@ -271,7 +234,7 @@ class SectionLogin extends React.Component<
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "text",
+                        type: "number",
                         endAdornment: (
                           <InputAdornment position="end">
                             <SmartPhone className={classes.inputIconsColor} />
