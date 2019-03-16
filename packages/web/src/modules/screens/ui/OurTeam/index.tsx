@@ -9,6 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Grid from "@material-ui/core/Grid";
 import Screen from "../../../../utils/components/Screen";
 import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) =>
   createStyles({
@@ -102,7 +103,11 @@ class OurTeam extends React.Component<Props> {
     return (
       <Screen title="Our Team">
         <div>
-          <Typography variant="headline" gutterBottom={true} align="center">
+          <Hidden only={["xs", "sm","md"]}>
+            <br />
+            <br />
+          </Hidden>
+          <Typography variant="display1" gutterBottom={true} align="center">
             Academic Team
           </Typography>
           <br />

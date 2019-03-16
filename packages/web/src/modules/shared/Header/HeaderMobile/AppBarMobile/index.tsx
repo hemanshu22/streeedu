@@ -9,6 +9,7 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Logo from "../../Logo";
+import Divider from "@material-ui/core/Divider";
 
 const styles = (theme: any) =>
   createStyles({
@@ -62,6 +63,7 @@ class AppBarMobile extends React.Component<Props> {
       <div className={classes.root}>
         <AppBar position="fixed" className={classes.appbarcolor}>
           <Logo />
+          <Divider />
           <Toolbar>
             <Grid container={true}>
               <Grid item={true}>

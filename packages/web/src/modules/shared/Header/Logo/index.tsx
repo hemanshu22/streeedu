@@ -7,7 +7,11 @@ import logo from "../../../../utils/img/logo.png";
 
 const styles = (theme: any) =>
   createStyles({
-    stree: {
+    logoweb: {
+      width: "400px",
+      paddingTop: "10px"
+    },
+    logomobile: {
       width: "350px",
       paddingTop: "6px"
     }
@@ -27,14 +31,13 @@ class Logo extends React.Component<Props> {
 
   render() {
     const { classes } = this.props;
-
     return (
       <div>
         <Hidden only={["lg"]}>
           <Grid container={true} justify="center">
             <Link href="/" style={{ textDecoration: "none" }}>
               <Grid item={true} justify="center">
-                <img src={logo} alt="stree" className={classes.stree} />
+                <img src={logo} alt="stree" className={classes.logomobile} />
               </Grid>
             </Link>
           </Grid>
@@ -43,7 +46,7 @@ class Logo extends React.Component<Props> {
           <Grid container={true} justify="center">
             <Link href="/" style={{ textDecoration: "none" }}>
               <Grid item={true} justify="center">
-                <img src={logo} alt="stree" className={classes.stree} />
+                <img src={logo} alt="stree" className={classes.logoweb} />
               </Grid>
             </Link>
           </Grid>

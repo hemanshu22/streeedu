@@ -3,8 +3,9 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+// import CardContent from "@material-ui/core/CardContent";
 import tree from "../../../../utils/img/tree.png";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) =>
   createStyles({
@@ -13,7 +14,11 @@ const styles = (theme: any) =>
       color: "#0052CC"
     },
     card: {
-      minHeight: 165
+      minHeight: "124px",
+      padding: "22px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
     },
     gridcontainer: {
       paddingRight: "10px",
@@ -27,70 +32,119 @@ class TeachingMethodology extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <div>
-        <br />
-        <br />
-        <Grid container={true} spacing={8}>
-          <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-            <Typography variant="display1" gutterBottom={true} align="center">
-              Teaching Methodology
-            </Typography>
+        <Hidden only={["sm", "xs", "lg"]}>
+          <br />
+          <br />
+          {/* <br />
+          <br /> */}
+          <Grid container={true} spacing={8}>
+            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
+              <Typography variant="display1" gutterBottom={true} align="center">
+                Teaching Methodology
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
-        <br />
+          <br />
+        </Hidden>
+        <Hidden only={["sm", "xs", "md"]}>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Grid container={true} spacing={8}>
+            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
+              <Typography variant="display1" gutterBottom={true} align="center">
+                Teaching Methodology
+              </Typography>
+            </Grid>
+          </Grid>
+          <br />
+        </Hidden>
+        <Hidden only={["md", "lg"]}>
+          <br />
+          <Grid container={true} spacing={8}>
+            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
+              <Typography variant="title" gutterBottom={true} align="center">
+                Teaching Methodology
+              </Typography>
+            </Grid>
+          </Grid>
+          <br />
+        </Hidden>
         <Grid container={true} spacing={16} className={classes.gridcontainer}>
-          <Grid item={true} xs={12} sm={3} md={3} lg={3}>
+          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
             <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="body1" gutterBottom={true}>
-                  Our teaching pedagogy is so unique and it is not only
-                  restricted to classroom program. We make the students
-                  proficient for solving complex and hard problems by improving
-                  and sharpening their analytical and logical thinking skills
-                </Typography>
-              </CardContent>
+              {/* <CardContent> */}
+              <Typography variant="body1" gutterBottom={true}>
+                Our teaching pedagogy is so unique and it is not only restricted
+                to classroom program. We make the students proficient for
+                solving complex and hard problems by improving and sharpening
+                their analytical and logical thinking skills
+              </Typography>
+              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={3} md={3} lg={3}>
+          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
             <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="body1" gutterBottom={true}>
-                  Our teaching methodology is highly motivational, innovative
-                  and interactive and designed in such a way that it suits
-                  specific individual needs and make them think out of box which
-                  is pivotal for success
-                </Typography>
-              </CardContent>
+              {/* <CardContent> */}
+              <Typography variant="body1" gutterBottom={true}>
+                Our teaching methodology is highly motivational, innovative and
+                interactive and designed in such a way that it suits specific
+                individual needs and make them think out of box which is pivotal
+                for success
+              </Typography>
+              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={3} md={3} lg={3}>
+          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
             <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="body1" gutterBottom={true}>
-                  Our lectures are developed in such a way that it is completed
-                  and finished in stipulated time along with that, we make sure
-                  the concepts are crystal clear for the students
-                </Typography>
-              </CardContent>
+              {/* <CardContent> */}
+              <Typography variant="body1" gutterBottom={true}>
+                Our lectures are developed in such a way that it is completed
+                and finished in stipulated time along with that, we make sure
+                the concepts are crystal clear for the students
+              </Typography>
+              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={3} md={3} lg={3}>
+          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
             <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="body1" gutterBottom={true}>
-                  A continuous student evaluation is done through regular tests
-                  and feedbacks are taken to get best out of them
-                </Typography>
-              </CardContent>
+              {/* <CardContent> */}
+              <Typography variant="body1" gutterBottom={true}>
+                A continuous student evaluation is done through regular tests
+                and feedbacks are taken to get best out of them
+              </Typography>
+              {/* </CardContent> */}
             </Card>
           </Grid>
         </Grid>
         <br />
         <br />
         <Grid container={true} spacing={8}>
-          <Grid item={true} xs={12} sm={12} md={4} lg={4}>
-            <img src={tree} />
-          </Grid>
-          <Grid item={true} xs={12} sm={8} md={8} lg={8}>
+          <Hidden only={["md", "lg", "sm"]}>
+            <Grid item={true} xs={12}>
+              <img src={tree} style={{ width: "100%" }} />
+            </Grid>
+          </Hidden>
+          <Hidden only={["lg", "xs"]}>
+            <Grid item={true} sm={12} md={12}>
+              <img src={tree} style={{ paddingLeft: "21%" }} />
+            </Grid>
+          </Hidden>
+          <Hidden only={["sm", "xs", "md"]}>
+            <Grid item={true} lg={4}>
+              <img src={tree} />
+            </Grid>
+          </Hidden>
+
+          <Grid
+            item={true}
+            xs={12}
+            sm={12}
+            md={12}
+            lg={8}
+            style={{ padding: "20px" }}
+          >
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
               <Typography variant="title" gutterBottom={true}>
                 Experienced Educationists

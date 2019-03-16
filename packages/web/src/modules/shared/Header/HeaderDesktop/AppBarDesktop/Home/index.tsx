@@ -1,12 +1,14 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
+import HomeIcon from "@material-ui/icons/Home";
+import Link from "@material-ui/core/Link";
 
 const styles = (theme: any) =>
   createStyles({
-    button: {
-      // margin: theme.spacing.unit,
-      color: "#42526E"
+    home: {
+      margin: theme.spacing.unit,
+      color: "black"
     }
   });
 
@@ -16,21 +18,14 @@ class Home extends React.Component<Props> {
     open: false
   };
 
-  handleToggle = (event: any) => {
-    this.setState({
-      open: event.currentTarget
-    });
-  };
-
   render() {
     const { classes } = this.props;
-
     return (
-      <div>
-        <Button className={classes.button} variant="text">
-          Home
-        </Button>
-      </div>
+      // <Button>
+      <Link href="/" style={{ textDecoration: "none" }}>
+        <HomeIcon className={classes.home} />
+      </Link>
+      // </Button>
     );
   }
 }

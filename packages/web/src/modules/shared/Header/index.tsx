@@ -16,7 +16,7 @@ class Header extends React.Component<Props> {
   };
 
   render() {
-    // const { classes } = this.props;
+   
     return (
       <div>
         <Hidden only={["xs", "sm", "md"]}>
