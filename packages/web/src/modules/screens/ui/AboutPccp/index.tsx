@@ -29,28 +29,25 @@ const styles = (theme: any) =>
   });
 
 interface Props extends WithStyles<typeof styles> {}
-class EduSystem extends React.Component<Props> {
+class AboutPccp extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <Screen title="AboutPccp">
+      <Screen title="About Pccp">
         <div>
-          <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
-            <Grid item={true} sm={10}>
-              <img src="/b1.png" style={{ width: "100%" }} />
-            </Grid>
+            <Grid item={true} sm={10} />
+            <Typography variant="display1" gutterBottom={true} align="center">
+              Pre-Foundation Career Care Program(PCCP)
+            </Typography>
           </Grid>
           <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10}>
-              <Typography variant="h6" gutterBottom={true}>
-                <br />
-                <b>
-                  THE PCCP COURSES ARE MEANT FOR STUDENTS OF CLASSES V TO X,THE
-                  COURSES SEEK TO DEVELOP THE FOLLOWING QUALITIES IN YOUNG
-                  STUDENT:
-                </b>
+              <Typography variant="button" gutterBottom={true}>
+                THE PCCP COURSES ARE MEANT FOR STUDENTS OF CLASSES V TO X,THE
+                COURSES SEEK TO DEVELOP THE FOLLOWING QUALITIES IN YOUNG
+                STUDENT:
               </Typography>
             </Grid>
           </Grid>
@@ -100,7 +97,6 @@ class EduSystem extends React.Component<Props> {
                         Competitive Psychology
                       </Typography>
                     </ListItem>
-
                     <ListItem button={true}>
                       <ListItemIcon>
                         <SendIcon />
@@ -133,7 +129,6 @@ class EduSystem extends React.Component<Props> {
                         Mathematical Aptitude
                       </Typography>
                     </ListItem>
-
                     <ListItem button={true}>
                       <ListItemIcon>
                         <SendIcon />
@@ -159,7 +154,6 @@ class EduSystem extends React.Component<Props> {
                         Self Confidence
                       </Typography>
                     </ListItem>
-
                     <ListItem button={true}>
                       <ListItemIcon>
                         <SendIcon />
@@ -202,8 +196,8 @@ class EduSystem extends React.Component<Props> {
           <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} xs={12}>
-              <Typography variant="h6" gutterBottom={true}>
-                <b> CORE FEATURES</b>
+              <Typography variant="button" gutterBottom={true}>
+                CORE FEATURES
               </Typography>
             </Grid>
           </Grid>
@@ -376,4 +370,4 @@ class EduSystem extends React.Component<Props> {
     );
   }
 }
-export default withStyles(styles)(EduSystem);
+export default withStyles(styles)(AboutPccp);

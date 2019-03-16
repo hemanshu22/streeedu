@@ -3,14 +3,10 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import CardOne from "./CardOne";
-// import CardTwo from "./CardTwo";
-import CardThree from "./CardThree";
 import CardFour from "./CardFour";
 import CardFive from "./CardFive";
 import CardSix from "./CardSix";
-import CardResult from "./CardResult";
 import CardTestimonials from "./CardTestimonials";
-import { EnquiryFormConnector } from "../../../connectors/EnquiryFormConnector";
 import resultimage from "../../../../../utils/img/result.jpg";
 
 const data1 = [
@@ -224,9 +220,9 @@ class SectionThree extends React.Component<Props> {
               data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
-          <br />
+          {/* <br /> */}
         </Grid>
-        <br />
+        {/* <br /> */}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           className={classes.curve}
@@ -239,9 +235,9 @@ class SectionThree extends React.Component<Props> {
             transform="translate(0-1977)"
           />
         </svg> */}
-        <br />
-        <br />
-        <Grid container={true} className={classes.root}>
+        {/* <br />
+        <br /> */}
+        {/* <Grid container={true} className={classes.root}>
           <Grid item={true} xs={12} md={1} />
           <Grid item={true} xs={12} md={5}>
             <Typography
@@ -308,9 +304,9 @@ class SectionThree extends React.Component<Props> {
           </Grid>
           <Grid item={true} xs={12} md={1} />
           <br />
-        </Grid>
-        <br />
-        <br />
+        </Grid> */}
+        {/* <br />
+        <br /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={classes.curve}
@@ -367,84 +363,6 @@ class SectionThree extends React.Component<Props> {
           </Grid>
           <Grid item={true} xs={12} md={1} />
         </Grid>
-        <Grid container={true} className={classes.cardresult}>
-          <Grid item={true} xs={12} md={4} />
-          <Grid item={true} xs={12} md={4}>
-            <Typography
-              gutterBottom={true}
-              variant="h4"
-              component="h3"
-              align="center"
-            >
-              <br />
-              Our Achievements
-              <br />
-              <br />
-            </Typography>
-          </Grid>
-          <Grid item={true} xs={12} md={4} />
-        </Grid>
-        <Grid
-          container={true}
-          direction="row"
-          spacing={16}
-          className={classes.achievements}
-          style={{ padding: "5px" }}
-        >
-          <Grid item={true} xs={2} md={1} sm={1} />
-          <Grid item={true} xs={8} md={2} sm={12}>
-            <CardResult
-              title="Mathematics Olympiad Qualifier"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
-              name="Himanshu Parashar"
-              medal="Gold Medal"
-              grade="Grade 10"
-              school="Indian High School, Dubai"
-            />
-          </Grid>
-          <Grid item={true} xs={8} md={2} sm={12}>
-            <CardResult
-              title="Mathematics Olympiad Qualifier"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
-              name="Himanshu Parashar"
-              medal="Gold Medal"
-              grade="Grade 10"
-              school="Indian High School, Dubai"
-            />
-          </Grid>
-          <Grid item={true} xs={8} md={2} sm={12}>
-            <CardResult
-              title="Mathematics Olympiad Qualifier"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
-              name="Himanshu Parashar"
-              medal="Gold Medal"
-              grade="Grade 10"
-              school="Indian High School, Dubai"
-            />
-          </Grid>
-          <Grid item={true} xs={8} md={2} sm={12}>
-            <CardResult
-              title="Mathematics Olympiad Qualifier"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
-              name="Himanshu Parashar"
-              medal="Gold Medal"
-              grade="Grade 10"
-              school="Indian High School, Dubai"
-            />
-          </Grid>
-          <Grid item={true} xs={8} md={2} sm={12}>
-            <CardResult
-              title="Mathematics Olympiad Qualifier"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
-              name="Himanshu Parashar"
-              medal="Gold Medal"
-              grade="Grade 10"
-              school="Indian High School, Dubai"
-            />
-          </Grid>
-          <Grid item={true} xs={2} md={1} sm={1} />
-        </Grid>
-        {/* </div> */}
         <Grid
           container={true}
           direction="row"
@@ -482,9 +400,9 @@ class SectionThree extends React.Component<Props> {
             <CardSix heading="Core Feature" data={data3} />
           </Grid>
         </Grid>
-        <div>
+        {/* <div>
           <EnquiryFormConnector />
-        </div>
+        </div> */}
         <Grid container={true} className={classes.root}>
           <Grid item={true} xs={12} md={4} />
           <Grid item={true} xs={12} md={4}>
@@ -498,11 +416,10 @@ class SectionThree extends React.Component<Props> {
             >
               Testimonials
             </Typography>
-            <br />
           </Grid>
           <Grid item={true} md={4} />
         </Grid>
-        <Grid container={true} className={classes.root}>
+        {/* <Grid container={true} className={classes.root}>
           <Grid item={true} xs={12} md={1} />
           <Grid item={true} xs={12} md={5}>
             <Typography
@@ -525,7 +442,7 @@ class SectionThree extends React.Component<Props> {
             </Typography>
           </Grid>
           <Grid item={true} md={1} />
-        </Grid>
+        </Grid> */}
         <Grid container={true} className={classes.root}>
           <Grid item={true} xs={1} sm={1} md={1} lg={1} />
           <Grid item={true} xs={12} sm={12} md={5} lg={5}>

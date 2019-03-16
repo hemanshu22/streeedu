@@ -13,7 +13,7 @@ const styles = (theme: any) =>
       borderTopWidth: "4px",
       borderTopStyle: "solid",
       transition: "box-shadow .5s",
-      borderColor: "#5b4cd8",
+      borderColor: "#86576b",
       "&:hover": {
         boxShadow: "5px 5px 5px 5px rgba(0,0,0,.05)"
       }
@@ -56,8 +56,6 @@ class CardTestimonials extends React.Component<Props> {
           />
         </div>
         <Paper elevation={3} className={classes.paper}>
-          <br /> <br /> <br /> <br />
-          <br />
           <Typography variant="body2" component="h3">
             {this.props.name}
           </Typography>

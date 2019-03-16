@@ -21,14 +21,14 @@ const styles = (theme: any) =>
     },
     firstfooter: {
       color: "white",
-      backgroundColor: "#303c42"
+      backgroundColor: "#86576b"
     },
     footer: {
-      backgroundColor: "#303c42",
+      backgroundColor: "#86576b",
       color: "#fff"
     },
     footerbottom: {
-      backgroundColor: "#455a64"
+      backgroundColor: "#694253"
     },
 
     copywright: {
@@ -97,8 +97,8 @@ class Footer extends React.Component<Props> {
             item={true}
             xs={12}
             sm={3}
-            md={3}
-            lg={3}
+            md={2}
+            lg={2}
             className={classes.griditem}
           >
             <ContactFooter />
@@ -107,8 +107,8 @@ class Footer extends React.Component<Props> {
             item={true}
             xs={12}
             sm={6}
-            md={6}
-            lg={3}
+            md={4}
+            lg={4}
             className={classes.griditem}
           >
             <Navigate />
@@ -117,7 +117,7 @@ class Footer extends React.Component<Props> {
             item={true}
             xs={12}
             sm={6}
-            md={6}
+            md={3}
             lg={3}
             className={classes.griditem}
           >

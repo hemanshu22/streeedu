@@ -27,12 +27,10 @@ class Innovations extends React.Component<Props> {
     return (
       <Screen title="Innovations">
         <div>
-          <br />
-
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10}>
-              <Typography variant="h6" gutterBottom={true} align="center">
-                <b>INNOVATION & CONTINUAL IMPROVEMENT</b>
+              <Typography variant="headline" gutterBottom={true} align="center">
+                INNOVATION & CONTINUAL IMPROVEMENT
               </Typography>
             </Grid>
           </Grid>

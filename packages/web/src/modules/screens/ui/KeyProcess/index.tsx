@@ -38,19 +38,13 @@ class KeyProcess extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <Screen title="AboutPccp">
+      <Screen title="Key Process">
         <div>
-          <br />
           <Grid container={true} spacing={8} className={classes.centerStyle}>
             <Grid item={true} sm={10}>
-              <Typography
-                variant="h6"
-                gutterBottom={true}
-                className={classes.fontStyle}
-              >
-                <b>EDU-SYSTEM </b>
+              <Typography variant="headline" gutterBottom={true}>
+                EDU-SYSTEM
               </Typography>
-              <br />
             </Grid>
           </Grid>
           <Grid container={true} spacing={8} className={classes.centerStyle}>
@@ -76,11 +70,11 @@ class KeyProcess extends React.Component<Props> {
           <Grid container={true} spacing={8} className={classes.centerStyle}>
             <Grid item={true} sm={10}>
               <Typography
-                variant="h6"
+                variant="title"
                 gutterBottom={true}
-                className={classes.fontStyle}
+                // className={classes.fontStyle}
               >
-                <b>Key Processes: Academics</b>
+                Key Processes: Academics
               </Typography>
             </Grid>
           </Grid>

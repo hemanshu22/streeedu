@@ -40,6 +40,7 @@ class AboutUs extends React.Component<Props> {
     const open = Boolean(anchorEl);
     return (
       <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;{" "}
         <Button
           aria-owns={open ? "menu-list-grow" : undefined}
           aria-haspopup="true"
@@ -63,16 +64,15 @@ class AboutUs extends React.Component<Props> {
                 <Link href="/aboutus" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>About Us</MenuItem>
                 </Link>
+                <Link href="/ourteam" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={this.handleClose}>
+                    Academic Council
+                  </MenuItem>
+                </Link>
                 <Link href="/success" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
                     Success Stories
                   </MenuItem>
-                </Link>
-                <Link href="/ourteam" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Our Team</MenuItem>
-                </Link>
-                <Link href="/faq" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>FAQ</MenuItem>
                 </Link>
               </MenuList>
             </ClickAwayListener>

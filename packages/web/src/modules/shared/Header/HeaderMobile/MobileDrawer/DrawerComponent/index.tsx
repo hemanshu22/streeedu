@@ -9,6 +9,9 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
+import InboxIcon from "@material-ui/icons/Inbox";
+import GroupIcon from "@material-ui/icons/Group";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 const styles = createStyles({
   list: {
@@ -28,27 +31,40 @@ class DrawerComponent extends React.Component<Props> {
   state = {
     open: false,
     academics: false,
-    contact: false
+    contact: false,
+    courses: false
   };
 
   handleClick = () => {
     this.setState({
       open: !this.state.open,
       academics: false,
-      contact: false
+      contact: false,
+      courses: false
     });
   };
   handleAcademicClick = () => {
     this.setState({
       open: false,
       academics: !this.state.academics,
-      contact: false
+      contact: false,
+      courses: false
+    });
+  };
+  handleCourseClick = () => {
+    this.setState({
+      open: false,
+      courses: !this.state.courses,
+      contact: false,
+      academics: false
     });
   };
   handleContactClick = () => {
     this.setState({
-      open: !this.state.open,
-      contact: false
+      open: false,
+      academics: false,
+      courses: false,
+      contact: !this.state.contact
     });
   };
   handleAdmissionClick = () => {
@@ -69,13 +85,20 @@ class DrawerComponent extends React.Component<Props> {
           </ListItem>
           <Divider />
           <ListItem button={true} onClick={this.handleClick}>
+            <ListItemIcon>
+              <GroupIcon />
+            </ListItemIcon>
             <Typography variant="title" align="center">
               About Us
             </Typography>
+
             {this.state.open ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={this.state.open} timeout="auto" unmountOnExit={true}>
             <ListItem button={true}>
+              <ListItemIcon>
+                <GroupIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/aboutus" style={{ textDecoration: "none" }}>
                   About Us
@@ -83,28 +106,115 @@ class DrawerComponent extends React.Component<Props> {
               </Typography>
             </ListItem>
             <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/ourteam" style={{ textDecoration: "none" }}>
+                  Academic Council
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/success" style={{ textDecoration: "none" }}>
                   Success Stories
                 </Link>
               </Typography>
             </ListItem>
+          </Collapse>
+          <Divider />
+          <ListItem button={true} onClick={this.handleCourseClick}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <Typography variant="title" align="center">
+              Courses
+            </Typography>
+            {this.state.courses ? <ExpandLess /> : <ExpandMore />}
+          </ListItem>
+
+          <Collapse in={this.state.courses} timeout="auto" unmountOnExit={true}>
             <ListItem button={true}>
+              <ListItemIcon>
+                <GroupIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
-                <Link href="/ourteam" style={{ textDecoration: "none" }}>
-                  Our Team
+                <Link href="/pccp" style={{ textDecoration: "none" }}>
+                  PCCP
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/sat" style={{ textDecoration: "none" }}>
+                  SAT
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/xii" style={{ textDecoration: "none" }}>
+                  XI/XII
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/jeemains" style={{ textDecoration: "none" }}>
+                  JEE MAINS
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/neet" style={{ textDecoration: "none" }}>
+                  NEET
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/olympiad" style={{ textDecoration: "none" }}>
+                  Olympiads
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/boards" style={{ textDecoration: "none" }}>
+                  Boards
                 </Link>
               </Typography>
             </ListItem>
           </Collapse>
-          <Divider />
-          <ListItem button={true}>
-            <Typography variant="title" align="center">
-              Courses
-            </Typography>
-          </ListItem>
+
           <Divider />
           <ListItem button={true} onClick={this.handleAcademicClick}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
             <Typography variant="title" align="center">
               Academics
             </Typography>
@@ -116,20 +226,9 @@ class DrawerComponent extends React.Component<Props> {
             unmountOnExit={true}
           >
             <ListItem button={true}>
-              <Typography variant="body1" align="center">
-                <Link href="/pccp" style={{ textDecoration: "none" }}>
-                  About PCCP
-                </Link>
-              </Typography>
-            </ListItem>
-            <ListItem button={true}>
-              <Typography variant="body1" align="center">
-                <Link href="/key" style={{ textDecoration: "none" }}>
-                  Key Process
-                </Link>
-              </Typography>
-            </ListItem>
-            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link
                   href="/academicexcellence"
@@ -140,28 +239,73 @@ class DrawerComponent extends React.Component<Props> {
               </Typography>
             </ListItem>
             <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link
+                  href="/examinformation"
+                  style={{ textDecoration: "none" }}
+                >
+                  Exam Information
+                </Link>
+              </Typography>
+            </ListItem>
+            <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/methodology" style={{ textDecoration: "none" }}>
+                  Teaching Methodology
+                </Link>
+              </Typography>
+            </ListItem>
+            {/* <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/innovative" style={{ textDecoration: "none" }}>
                   Innovation & Continual Improvement
                 </Link>
               </Typography>
-            </ListItem>
+            </ListItem> */}
             <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
               <Typography variant="body1" align="center">
-                <Link href="/career" style={{ textDecoration: "none" }}>
-                  Admission/Career Counselling
+                <Link href="/analysis" style={{ textDecoration: "none" }}>
+                  Test Analysis
                 </Link>
               </Typography>
             </ListItem>
+            {/* <ListItem button={true}>
+              <ListItemIcon>
+                <InboxIcon />
+              </ListItemIcon>
+              <Typography variant="body1" align="center">
+                <Link href="/methodology" style={{ textDecoration: "none" }}>
+                  Teaching Methodology
+                </Link>
+              </Typography>
+            </ListItem> */}
           </Collapse>
           <Divider />
           <ListItem button={true}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
             <Typography variant="title" align="center">
               Gallery
             </Typography>
           </ListItem>
           <Divider />
           <ListItem button={true}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
             <Typography variant="title" align="center">
               <Link href="/faq" style={{ textDecoration: "none" }}>
                 Faq
@@ -172,7 +316,7 @@ class DrawerComponent extends React.Component<Props> {
           <ListItem button={true}>
             <Button variant="outlined" color="primary">
               <Link href="/enquiry" style={{ textDecoration: "none" }}>
-                EQUIRY NOW
+                EQUIRY
               </Link>
             </Button>
           </ListItem>

@@ -6,7 +6,7 @@ const styles = (theme: any) =>
   createStyles({
     cardinner: {
       padding: "15px",
-      backgroundColor: "#303c42"
+      backgroundColor: "#86576b"
     },
     footer: { color: "#fff" }
   });

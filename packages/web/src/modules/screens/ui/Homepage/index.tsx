@@ -5,7 +5,7 @@ import Slider from "../Slider";
 import SectionOne from "./SectionOne";
 // import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
-// import CardDesign from "./CardDesign";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) =>
   createStyles({
@@ -45,21 +45,20 @@ class Homepage extends React.Component<Props> {
 
     return (
       <div>
-        {/* <Paper elevation={1} className={classes.paper}> */}
-        <Slider />
-        <SectionOne />
-        {/* <SectionTwo /> */}
-        <SectionThree />
-
-        {/* <CardDesign /> */}
-        {/* <img src={"/3.jpg"} className={classes.image} /> */}
-        {/* <video className={classes.video}>
-            <source
-              src="https://mdbootstrap.com/img/video/city.mp4"
-              type="video/mp4"
-            />
-          </video> */}
-        {/* </Paper> */}
+        <div>
+          <Hidden only={["lg"]}>
+            <Slider />
+            <SectionOne />
+            <SectionThree />
+          </Hidden>
+        </div>
+        <div style={{ paddingTop: "6px" }}>
+          <Hidden only={["xs", "sm", "md"]}>
+            <br /> <Slider />
+            <SectionOne />
+            <SectionThree />
+          </Hidden>
+        </div>
       </div>
     );
   }

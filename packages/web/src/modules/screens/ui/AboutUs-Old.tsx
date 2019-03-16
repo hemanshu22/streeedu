@@ -2,8 +2,8 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Achivements from "./Achivements";
-import Hidden from "@material-ui/core/Hidden";
+// import Achivements from "./Achivements";
+// import Hidden from "@material-ui/core/Hidden";
 import Screen from "../../../utils/components/Screen";
 
 const styles = (theme: any) =>
@@ -74,13 +74,13 @@ class AboutUs extends React.Component<Props> {
             gutterBottom={true}
             className={classes.grid_cen}
           >
-            ABOUTUS
+            ABOUTUS 1
           </Typography>
           <br />
           <Grid container={true}>
             <Grid item={true} sm={7}>
               <Typography variant="body1">
-                Resonance launched Pre-foundation Career Care Programs (PCCPs)
+                q Resonance launched Pre-foundation Career Care Programs (PCCPs)
                 Division in 2006 with the philosophy of an early start. As the
                 name suggests, the division aims at giving the edge to the
                 students for Career Examinations like JEE (Main + Advanced),
@@ -105,7 +105,7 @@ class AboutUs extends React.Component<Props> {
                 situations like that of the real one.
               </Typography>
             </Grid>
-            <Grid className={classes.grid_cen} item={true} sm={5}>
+            {/* <Grid className={classes.grid_cen} item={true} sm={5}>
               <Hidden mdDown={true}>
                 <img className={classes.abt_img} src="/Victory.png" />
               </Hidden>
@@ -114,10 +114,10 @@ class AboutUs extends React.Component<Props> {
                 <img className={classes.abt_img_mob} src="/Victory.png" />
               </Hidden>
             </Grid>
-          </Grid>
-          <br />
-          <br />
-          <Hidden smDown={true}>
+          </Grid> */}
+            <br />
+            <br />
+            {/* <Hidden smDown={true}>
             <div style={{ background: "#f1f4f7", height: "339px" }}>
               <div style={{ paddingTop: "30px" }}>
                 <Grid container={true} className={classes.grid_cen}>
@@ -193,8 +193,8 @@ class AboutUs extends React.Component<Props> {
               </div>
             </div>
             <br />
-          </Hidden>
-          <Hidden mdUp={true}>
+          </Hidden> */}
+            {/* <Hidden mdUp={true}>
             <div style={{ background: "#f1f4f7" }}>
               <Grid container={true} justify="center">
                 <Grid item={true} sm={12}>
@@ -418,7 +418,8 @@ class AboutUs extends React.Component<Props> {
           </Hidden>
           <br />
           <br />
-          <Achivements />
+          <Achivements /> */}
+          </Grid>
         </div>
       </Screen>
     );

@@ -3,19 +3,13 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import Link from "@material-ui/core/Link";
+import logo from "../../../../utils/img/logo.png";
 
 const styles = (theme: any) =>
   createStyles({
-    resonance: {
-      width: "180px"
-    },
     stree: {
-      width: "180px",
+      width: "350px",
       paddingTop: "6px"
-      // padding: "5px"
-    },
-    logo: {
-      //  paddingLeft: "30px"
     }
   });
 
@@ -40,17 +34,7 @@ class Logo extends React.Component<Props> {
           <Grid container={true} justify="center">
             <Link href="/" style={{ textDecoration: "none" }}>
               <Grid item={true} justify="center">
-                <img
-                  src="http://www.streeedu.com/img/stree/logo.png"
-                  alt="stree"
-                  className={classes.stree}
-                />
-
-                <img
-                  src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
-                  alt="resonance home"
-                  className={classes.resonance}
-                />
+                <img src={logo} alt="stree" className={classes.stree} />
               </Grid>
             </Link>
           </Grid>
@@ -59,17 +43,7 @@ class Logo extends React.Component<Props> {
           <Grid container={true} justify="center">
             <Link href="/" style={{ textDecoration: "none" }}>
               <Grid item={true} justify="center">
-                <img
-                  src="http://www.streeedu.com/img/stree/logo.png"
-                  alt="stree"
-                  className={classes.stree}
-                />
-
-                <img
-                  src="http://www.streeedu.com/img/stree/Resonance-Logo.jpg"
-                  alt="resonance home"
-                  className={classes.resonance}
-                />
+                <img src={logo} alt="stree" className={classes.stree} />
               </Grid>
             </Link>
           </Grid>

@@ -1,15 +1,14 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Carousel from "nuka-carousel";
-import image1 from "../../../../utils/img/city.jpg";
-import image2 from "../../../../utils/img/bg2.jpg";
-import image3 from "../../../../utils/img/bg3.jpg";
-import image4 from "../../../../utils/img/bg.jpg";
+import image1 from "../../../../utils/img/l1.jpg";
+import image2 from "../../../../utils/img/l2.jpg";
+// import image3 from "../../../../utils/img/bg3.jpg";
+// import image4 from "../../../../utils/img/bg.jpg";
 
 const styles = () =>
   createStyles({
     root: {
-      // maxWidth: 400,
       flexGrow: 1
     },
     "slider-control-centerleft button": {
@@ -27,25 +26,14 @@ class Slider extends React.Component<Props> {
 
   render() {
     //  const { classes } = this.props;
-
     return (
       <Carousel
-        autoplay={true}
+        autoplay={false}
         autoplayInterval={1000}
         slideIndex={this.state.slideIndex}
         dragging={true}
         swiping={true}
       >
-        {/* <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
-        <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" /> */}
-        <img src={image1} />
-        <img src={image2} />
-        <img src={image3} />
-        <img src={image4} />
         <img src={image1} />
         <img src={image2} />
       </Carousel>

@@ -5,7 +5,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
+// import DialogTitle from "@material-ui/core/DialogTitle";
 import Grid from "@material-ui/core/Grid";
 import Screen from "../../../../utils/components/Screen";
 import Typography from "@material-ui/core/Typography";
@@ -32,7 +32,9 @@ class SuccessStories extends React.Component<Props> {
     open1: false,
     open2: false,
     open3: false,
-    open4: false
+    open4: false,
+    open5: false,
+    open6: false
   };
 
   handleClickOpen1 = () => {
@@ -66,11 +68,22 @@ class SuccessStories extends React.Component<Props> {
   handleClose4 = () => {
     this.setState({ open4: false });
   };
-
+  handleClickOpen5 = () => {
+    this.setState({ open5: true });
+  };
+  handleClose5 = () => {
+    this.setState({ open5: false });
+  };
+  handleClickOpen6 = () => {
+    this.setState({ open6: true });
+  };
+  handleClose6 = () => {
+    this.setState({ open6: false });
+  };
   render() {
     const { classes } = this.props;
     return (
-      <Screen title="Our-team">
+      <Screen title="Success Stories">
         <div>
           <Typography variant="headline" gutterBottom={true} align="center">
             Success Stories
@@ -83,7 +96,10 @@ class SuccessStories extends React.Component<Props> {
                 color="primary"
                 onClick={this.handleClickOpen1}
               >
-                <img className={classes.imgstyle} src="/Resonancesuccess.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/Resonancesuccess.jpg"
+                />
               </Button>
             </Grid>
 
@@ -93,16 +109,22 @@ class SuccessStories extends React.Component<Props> {
                 color="primary"
                 onClick={this.handleClickOpen2}
               >
-                <img className={classes.imgstyle} src="/Resultbanner.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/Resultbanner.jpg"
+                />
               </Button>
             </Grid>
             <Grid item={true} xs={12} sm={4}>
               <Button
                 className={classes.btnstyle}
                 color="primary"
-                onClick={this.handleClickOpen2}
+                onClick={this.handleClickOpen3}
               >
-                <img className={classes.imgstyle} src="/v4.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v4.jpg"
+                />
               </Button>
             </Grid>
 
@@ -110,9 +132,12 @@ class SuccessStories extends React.Component<Props> {
               <Button
                 className={classes.h1style}
                 color="primary"
-                onClick={this.handleClickOpen1}
+                onClick={this.handleClickOpen4}
               >
-                <img className={classes.imgstyle} src="/v5.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v5.jpg"
+                />
               </Button>
             </Grid>
 
@@ -120,18 +145,24 @@ class SuccessStories extends React.Component<Props> {
               <Button
                 className={classes.btnstyle}
                 color="primary"
-                onClick={this.handleClickOpen2}
+                onClick={this.handleClickOpen5}
               >
-                <img className={classes.imgstyle} src="/v1.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v1.jpg"
+                />
               </Button>
             </Grid>
             <Grid item={true} xs={12} sm={4}>
               <Button
                 className={classes.btnstyle}
                 color="primary"
-                onClick={this.handleClickOpen2}
+                onClick={this.handleClickOpen6}
               >
-                <img className={classes.imgstyle} src="/v2.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v2.jpg"
+                />
               </Button>
             </Grid>
           </Grid>
@@ -143,7 +174,10 @@ class SuccessStories extends React.Component<Props> {
           >
             <DialogContent>
               <DialogContentText>
-                <img className={classes.imgstyle} src="/Resonancesuccess.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/Resonancesuccess.jpg"
+                />
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -160,7 +194,10 @@ class SuccessStories extends React.Component<Props> {
           >
             <DialogContent>
               <DialogContentText>
-                <img className={classes.imgstyle} src="/Resultbanner.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/Resultbanner.jpg"
+                />
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -177,7 +214,10 @@ class SuccessStories extends React.Component<Props> {
           >
             <DialogContent>
               <DialogContentText>
-                <img className={classes.imgstyle} src="/v4.jpg" />
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v4.jpg"
+                />
               </DialogContentText>
             </DialogContent>
             <DialogActions>
@@ -192,7 +232,59 @@ class SuccessStories extends React.Component<Props> {
             onClose={this.handleClose4}
             aria-labelledby="form-dialog-title"
           >
-            <DialogTitle id="form-dialog-title">.</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v5.jpg"
+                />
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.handleClose4} color="primary">
+                Close
+              </Button>
+            </DialogActions>
+          </Dialog>
+
+          <Dialog
+            open={this.state.open5}
+            onClose={this.handleClose5}
+            aria-labelledby="form-dialog-title"
+          >
+            <DialogContent>
+              <DialogContentText>
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v1.jpg"
+                />
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.handleClose5} color="primary">
+                Close
+              </Button>
+            </DialogActions>
+          </Dialog>
+
+          <Dialog
+            open={this.state.open6}
+            onClose={this.handleClose6}
+            aria-labelledby="form-dialog-title"
+          >
+            <DialogContent>
+              <DialogContentText>
+                <img
+                  className={classes.imgstyle}
+                  src="http://www.streeedu.com/img/stree/v2.jpg"
+                />
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.handleClose6} color="primary">
+                Close
+              </Button>
+            </DialogActions>
           </Dialog>
         </div>
       </Screen>

@@ -10,7 +10,7 @@ const styles = (theme: any) =>
       backgroundColor: "#ffffff"
     },
     firstdiv: {
-      backgroundColor: "#546e7b",
+      backgroundColor: "#86576b",
       padding: "25px"
     },
     seconddiv: {
@@ -50,7 +50,7 @@ class CardFive extends React.Component<Props> {
               component="h3"
               className={classes.heading}
             >
-              Course Qualities
+              Course Highlights
             </Typography>
             <br />
             <br />

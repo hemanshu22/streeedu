@@ -1,8 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { RegisterConnector } from "../modules/register/RegisterConnector";
-// import { ActiveViewConnector } from "../modules/dashboard/ActiveViewConnector";
-// import { InactiveViewConnector } from "../modules/dashboard/InactiveViewConnector";
 import { DashboardConnector } from "../modules/dashboard/DashboardConnector";
 import AboutUs from "../modules/screens/ui/AboutUs";
 import { WorkshopFormConnector } from "../modules/screens/connectors/WorkshopFormConnector";
@@ -15,6 +13,10 @@ import KeyProcess from "../modules/screens/ui/KeyProcess";
 import Innovations from "../modules/screens/ui/Innovations";
 import Admissions from "../modules/screens/ui/Admissions";
 import FAQ from "../modules/screens/ui/FAQ";
+import Address from "../modules/screens/ui/Address";
+import AcademicExcellence from "../modules/screens/ui/AcademicExcellence";
+import TeachingMethodology from "../modules/screens/ui/TeachingMethodology";
+import TestAnalysis from "../modules/screens/ui/TestAnalysis";
 
 export const Routes = () => (
   <BrowserRouter>
@@ -37,6 +39,14 @@ export const Routes = () => (
       <Route exact={true} path="/innovative" component={Innovations} />
       <Route exact={true} path="/career" component={Admissions} />
       <Route exact={true} path="/faq" component={FAQ} />
+      <Route exact={true} path="/address" component={Address} />
+      <Route exact={true} path="/methodology" component={TeachingMethodology} />
+      <Route exact={true} path="/analysis" component={TestAnalysis} />
+      <Route
+        exact={true}
+        path="/academicexcellence"
+        component={AcademicExcellence}
+      />
     </Switch>
   </BrowserRouter>
 );

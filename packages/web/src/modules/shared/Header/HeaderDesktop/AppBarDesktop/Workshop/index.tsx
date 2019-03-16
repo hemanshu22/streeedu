@@ -7,15 +7,13 @@ const styles = (theme: any) =>
   createStyles({
     button: {
       margin: theme.spacing.unit,
-      color: "#86576b"
-    },
-    enquiry: {
-      //  textAlign: "right"
+      backgroundColor: "#86576b",
+      color: "white"
     }
   });
 
 interface Props extends WithStyles<typeof styles> {}
-class Enquiry extends React.Component<Props> {
+class Workshop extends React.Component<Props> {
   state = {
     open: false
   };
@@ -30,14 +28,14 @@ class Enquiry extends React.Component<Props> {
     const { classes } = this.props;
 
     return (
-      <div className={classes.enquiry}>
-        <Link href="/enquiry" style={{ textDecoration: "none" }}>
-          <Button className={classes.button} variant="outlined">
-            ENQUIRY
+      <div>
+        <Link href="/workshop" style={{ textDecoration: "none" }}>
+          <Button className={classes.button} variant="contained">
+            WORKSHOP
           </Button>
         </Link>
       </div>
     );
   }
 }
-export default withStyles(styles)(Enquiry);
+export default withStyles(styles)(Workshop);

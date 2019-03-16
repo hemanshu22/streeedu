@@ -13,10 +13,10 @@ const styles = (theme: any) =>
   createStyles({
     cardinner: {
       padding: "15px",
-      backgroundColor: "#303c42"
+      backgroundColor: "#86576b"
     },
     footer: {
-      backgroundColor: "#303c42",
+      // backgroundColor: "#303c42",
       color: "#fff"
     },
     fabclass: {
@@ -55,13 +55,16 @@ class SocialMedia extends React.Component<Props> {
           Follow us on:
         </Typography>
         <br />
-
         <Tooltip
           title="facebook"
           placement="bottom-start"
           classes={{ tooltip: classes.lightTooltip }}
         >
-          <Fab size="medium" className={classes.fabclass}>
+          <Fab
+            size="medium"
+            className={classes.fabclass}
+            href="https://www.facebook.com/Streeedu/?notif_id=1547442124213134&notif_t=page_fan"
+          >
             <svg className={classes.svbfb} viewBox="0 0 24 24">
               <path
                 fill="#3F51B5"
@@ -75,7 +78,11 @@ class SocialMedia extends React.Component<Props> {
           placement="bottom-start"
           classes={{ tooltip: classes.lightTooltip }}
         >
-          <Fab size="medium" className={classes.fabclass}>
+          <Fab
+            size="medium"
+            className={classes.fabclass}
+            href="https://www.instagram.com/stree_education/?hl=en"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={classes.svbfb}
@@ -90,7 +97,11 @@ class SocialMedia extends React.Component<Props> {
           placement="bottom-start"
           classes={{ tooltip: classes.lightTooltip }}
         >
-          <Fab size="medium" className={classes.fabclass}>
+          <Fab
+            size="medium"
+            className={classes.fabclass}
+            href="https://www.youtube.com/channel/UC5N5SYLjvnC4E6RbqtTOeRQ?view_as=subscriber"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#ff0000"
