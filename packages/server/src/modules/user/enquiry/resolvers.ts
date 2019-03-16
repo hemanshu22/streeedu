@@ -3,7 +3,7 @@ import { Enquiry } from "../../../entity/Enquiry";
 import { formatYupError } from "../../../utils/formatYupError";
 import { validEnquiryFormSchema } from "@abb/common";
 // import { createConfirmEmailLink } from "./createConfirmEmailLink";
-// import { sendEmail } from "../../../utils/sendEmail";
+//import { sendEmail } from "../../../utils/sendEmail";
 
 export const resolvers: ResolverMap = {
   Mutation: {
@@ -45,7 +45,7 @@ export const resolvers: ResolverMap = {
       // if (process.env.NODE_ENV !== "test") {
       //   await sendEmail(
       //     email,
-      //     await createConfirmEmailLink(url, user.id, redis)
+      //     await createConfirmEmailLink(url, enquiryform.id, redis)
       //   );
       // }
 
