@@ -8,7 +8,7 @@ type Mutation {
     email: String!
     parentname: String!
     school: String!
-    mobile: String!
+    mobile: Int!
     area: String!
     grade: String!
     enquiry: String!

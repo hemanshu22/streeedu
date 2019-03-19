@@ -6,6 +6,8 @@ export const nameNotLongEnough = "name must be at least 3 characters";
 export const schoolNotLongEnough = "school name must be at least 3 characters";
 export const mobileNotLongEnough = "mobile number must be only 10 numbers";
 
+const phoneRegExp = /^(?:\+971|00971|0)?(?:50|51|52|55|56|58|2|3|4|5|6|7|9)\d{7}$/;
+
 export const validWorkshopFormSchema = yup.object().shape({
   email: yup
     .string()
@@ -32,7 +34,7 @@ export const validWorkshopFormSchema = yup.object().shape({
     .max(255)
     .required(),
   mobile: yup
-    .number()
-    .min(10, mobileNotLongEnough)
+    .string()
+    .matches(phoneRegExp, "mobile number is not valid !")
     .required()
 });

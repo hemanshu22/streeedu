@@ -99,7 +99,7 @@ declare namespace GQL {
     email: string;
     classs: string;
     school: string;
-    mobile: string;
+    mobile: number;
     area: string;
   }
 
