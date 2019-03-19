@@ -265,7 +265,14 @@ class SectionLogin extends React.Component<FormikProps<FormValues> & Props> {
 
 const Comp = withFormik<Props, FormValues>({
   validationSchema: validWorkshopFormSchema,
-
+  mapPropsToValues: () => ({
+    name: "",
+    email: "",
+    school: "",
+    classs: "",
+    area: "",
+    mobile: 0
+  }),
   handleSubmit: async (values, { props, setErrors, resetForm }) => {
     props.showLoader();
     const errors = await props.submit(values);
