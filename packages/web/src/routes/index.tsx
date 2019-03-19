@@ -9,6 +9,7 @@ import OurTeam from "../modules/screens/ui/OurTeam";
 import Homepage from "../modules/screens/ui/Homepage";
 import SuccessStories from "../modules/screens/ui/SuccessStories";
 import AboutPccp from "../modules/screens/ui/AboutPccp";
+import Sat from "../modules/screens/ui/Sat";
 import KeyProcess from "../modules/screens/ui/KeyProcess";
 import Innovations from "../modules/screens/ui/Innovations";
 import Admissions from "../modules/screens/ui/Admissions";
@@ -35,6 +36,7 @@ export const Routes = () => (
       <Route exact={true} path="/ourteam" component={OurTeam} />
       <Route exact={true} path="/success" component={SuccessStories} />
       <Route exact={true} path="/pccp" component={AboutPccp} />
+      <Route exact={true} path="/sat" component={Sat} />
       <Route exact={true} path="/key" component={KeyProcess} />
       <Route exact={true} path="/innovative" component={Innovations} />
       <Route exact={true} path="/career" component={Admissions} />

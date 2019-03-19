@@ -39,7 +39,6 @@ class AcademicExcellence extends React.Component<Props> {
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid item={true} xs={12} sm={4} md={4} lg={4}>
               <img src={demo} />
-              {/* <img src={demo} /> */}
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
@@ -212,47 +211,6 @@ class AcademicExcellence extends React.Component<Props> {
             >
               <div>
                 <Typography variant="headline" gutterBottom={true}>
-                  ALL INDIA TESTING
-                </Typography>
-                <br />
-                <Typography variant="body1" gutterBottom={true}>
-                  The concepts learnt and practiced by the students are tested
-                  through regular tests mentioned in the yearly planner. These
-                  tests are conducted among the students of Resonance across all
-                  the study centers. This helps students to check their
-                  performance at the national level. These tests are conducted
-                  in objective as well as subjective manner periodically and
-                  keep a check of both current as well as previously taught
-                  syllabus.
-                </Typography>
-              </div>
-            </Grid>
-
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/survey.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-          </Grid>
-          <br />
-          <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/report-card.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid
-              item={true}
-              xs={12}
-              sm={4}
-              md={4}
-              lg={4}
-              className={classes.planner}
-            >
-              <div>
-                <Typography variant="headline" gutterBottom={true}>
                   STUDENT ANALYSIS AND PERFORMANCE EVALUATION REPORT (SAPER)
                 </Typography>
                 <br />
@@ -265,9 +223,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -293,18 +259,10 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/school.png" /> */}
-            </Grid>
+        
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -328,9 +286,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -357,13 +323,9 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/mental-state.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
         </Hidden>
+
         {/*for smaller device*/}
 
          <Hidden only={["lg", "md", "xs"]}>
@@ -553,47 +515,6 @@ class AcademicExcellence extends React.Component<Props> {
             >
               <div>
                 <Typography variant="headline" gutterBottom={true}>
-                  ALL INDIA TESTING
-                </Typography>
-                <br />
-                <Typography variant="body1" gutterBottom={true}>
-                  The concepts learnt and practiced by the students are tested
-                  through regular tests mentioned in the yearly planner. These
-                  tests are conducted among the students of Resonance across all
-                  the study centers. This helps students to check their
-                  performance at the national level. These tests are conducted
-                  in objective as well as subjective manner periodically and
-                  keep a check of both current as well as previously taught
-                  syllabus.
-                </Typography>
-              </div>
-            </Grid>
-
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/survey.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-          </Grid>
-          <br />
-          <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/report-card.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid
-              item={true}
-              xs={12}
-              sm={4}
-              md={4}
-              lg={4}
-              className={classes.planner}
-            >
-              <div>
-                <Typography variant="headline" gutterBottom={true}>
                   STUDENT ANALYSIS AND PERFORMANCE EVALUATION REPORT (SAPER)
                 </Typography>
                 <br />
@@ -606,9 +527,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+           <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -634,18 +563,9 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/school.png" /> */}
-            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -669,9 +589,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -696,11 +624,6 @@ class AcademicExcellence extends React.Component<Props> {
                   from supplementary books.
                 </Typography>
               </div>
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/mental-state.png" /> */}
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
@@ -888,48 +811,7 @@ class AcademicExcellence extends React.Component<Props> {
           </Grid>
           <br />
           <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid
-              item={true}
-              xs={12}
-              sm={4}
-              md={4}
-              lg={4}
-              className={classes.planner}
-            >
-              <div>
-                <Typography variant="headline" gutterBottom={true}>
-                  ALL INDIA TESTING
-                </Typography>
-                <br />
-                <Typography variant="body1" gutterBottom={true}>
-                  The concepts learnt and practiced by the students are tested
-                  through regular tests mentioned in the yearly planner. These
-                  tests are conducted among the students of Resonance across all
-                  the study centers. This helps students to check their
-                  performance at the national level. These tests are conducted
-                  in objective as well as subjective manner periodically and
-                  keep a check of both current as well as previously taught
-                  syllabus.
-                </Typography>
-              </div>
-            </Grid>
-
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/survey.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-          </Grid>
-          <br />
-          <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/report-card.png" /> */}
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
               xs={12}
@@ -952,9 +834,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -979,19 +869,11 @@ class AcademicExcellence extends React.Component<Props> {
                 </Typography>
               </div>
             </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-            </Grid>
+           
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/school.png" /> */}
-            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -1015,9 +897,17 @@ class AcademicExcellence extends React.Component<Props> {
               </div>
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
+            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
           <br />
           <Grid container={true}>
+          <Grid item={true} xs={12} sm={1} md={1} lg={1} />
+            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
+              <img src={demo} />
+            </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
             <Grid
               item={true}
@@ -1042,11 +932,6 @@ class AcademicExcellence extends React.Component<Props> {
                   from supplementary books.
                 </Typography>
               </div>
-            </Grid>
-            <Grid item={true} xs={12} sm={1} md={1} lg={1} />
-            <Grid item={true} xs={12} sm={4} md={4} lg={4}>
-              <img src={demo} />
-              {/* <img src="https://img.icons8.com/color/100/000000/mental-state.png" /> */}
             </Grid>
             <Grid item={true} xs={12} sm={1} md={1} lg={1} />
           </Grid>
@@ -1202,37 +1087,6 @@ class AcademicExcellence extends React.Component<Props> {
                   of absorption of the concept. Students who do regular homework
                   and participate in classroom discussion are very much likely
                   to succeed in the competitive examinations. Scientifically.
-                </Typography>
-              </div>
-            </Grid>
-          </Grid>
-          <br />
-          <Grid container={true}>
-            <Grid item={true} xs={12}>
-              <img src={demo} />
-            </Grid>
-            <Grid item={true} xs={12} className={classes.planner}>
-              <div>
-                <Typography
-                  variant="subheading"
-                  gutterBottom={true}
-                  align="center"
-                >
-                  <b>ALL INDIA TESTING</b>
-                </Typography>
-                <Typography
-                  variant="body1"
-                  gutterBottom={true}
-                  style={{ padding: "10px" }}
-                >
-                  The concepts learnt and practiced by the students are tested
-                  through regular tests mentioned in the yearly planner. These
-                  tests are conducted among the students of Resonance across all
-                  the study centers. This helps students to check their
-                  performance at the national level. These tests are conducted
-                  in objective as well as subjective manner periodically and
-                  keep a check of both current as well as previously taught
-                  syllabus.
                 </Typography>
               </div>
             </Grid>

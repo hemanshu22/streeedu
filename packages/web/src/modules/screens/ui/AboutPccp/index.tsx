@@ -35,6 +35,7 @@ class AboutPccp extends React.Component<Props> {
     return (
       <Screen title="About Pccp">
         <div>
+          <br />
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={10} />
             <Typography variant="display1" gutterBottom={true} align="center">
@@ -68,7 +69,7 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Scientific Temperament.
+                        Scientific Temperament
                       </Typography>
                     </ListItem>
 

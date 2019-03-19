@@ -2,7 +2,6 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
 // import CardOne from "./CardOne";
 import CardTwo from "./CardTwo";
 import CardFour from "./CardFour";
@@ -91,31 +90,7 @@ const data3 = [
   { label: "Motivation & Counselling Sessions" },
   { label: "Subjective and school Examination preparatory tests" }
 ];
-const data4 = [
-  {
-    msg:
-      "Every student upon completing their board exams look forward to professional entrance coaching. Parents in UAE realize that their children would get the best coaching at the best institute in UAE and Dubai. But how will anyone decide which institute is best? "
-  }
-];
-const data5 = [
-  {
-    msg:
-      "Good training through an established brand – Resonance, one of the leading institutions with experienced faculty along with updated course contents. We ensure appreciable student-lecturer relationship which is considered the best in coaching process."
-  }
-];
-const data6 = [
-  {
-    msg:
-      "Good training through an established brand – Resonance, one of the leading institutions with experienced faculty along with updated course contents. We ensure appreciable student-lecturer relationship which is considered the best in coaching process."
-  }
-  // {
-  //   msg:
-  //     "• Our Academic Partners are Resonance , one of the reputed Coaching institutions in India."
-  // },
-  // {
-  //   msg: "• We have an impeccable system of education delivery."
-  // }
-];
+
 const styles = (theme: any) =>
   createStyles({
     root: {
@@ -134,7 +109,8 @@ const styles = (theme: any) =>
       alignItems: "stretch"
     },
     courses: {
-      display: "flex"
+      display: "flex",
+      alignItems: "stretch"
     },
     coursecontent: {
       padding: "10px"
@@ -205,123 +181,165 @@ class SectionThree extends React.Component<Props> {
           </Grid>
           <Grid item={true} md={2} />
         </Grid>
-        <Hidden only={["xs"]}>
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} md={2} sm={1} lg={2} />
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="PCCP1"
-                backgroundcolor="linear-gradient(#3b3bf4, #0082ff, #00b0ff, #00d6ff, #08f6ec)"
-              />
-            </Grid>
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="SAT"
-                backgroundcolor="linear-gradient(#f4a93b, #f5ad33, #f6b129, #f6b51d, #f6b908)"
-              />
-            </Grid>
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="XI/XII"
-                backgroundcolor="linear-gradient(#051937, #004d7a, #008793, #00bf72, #a8eb12)"
-              />
-            </Grid>
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="JEE MAINS"
-                backgroundcolor="linear-gradient(#e51f16, #fe0046, #ff0077, #ff00ae, #f403e9)"
-              />
-            </Grid>
-            <Grid item={true} md={2} sm={1} lg={2} />
+        <Grid
+          container={true}
+          direction="row"
+          spacing={8}
+          // style={{ padding: "5px" }}
+        >
+          <Grid item={true} xs={12} md={2} sm={2} lg={2} />
+          <Grid
+            item={true}
+            xs={12}
+            md={2}
+            sm={12}
+            lg={2}
+            className={classes.courses}
+          >
+            <CardTwo />
+            {/* <CardOne
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/IJSO.jpg/189px-IJSO.jpg"
+              title="IJSO"
+              subheading="International Junior Science Olympiad"
+              data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
+            /> */}
           </Grid>
-        </Hidden>
-        <Hidden only={["xs"]}>
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} sm={2} md={3} lg={3} />
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="NEET"
-                backgroundcolor="linear-gradient(#6ecd60, #8cd952, #ace341, #cfec2b, #f4f403)"
-              />
-            </Grid>
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="Olympiads"
-                backgroundcolor="linear-gradient(#d316e5, #ff0086, #ff5f1f, #f0b300, #8deb12)"
-              />
-            </Grid>
-            <Grid item={true} sm={2} md={2} lg={2} className={classes.courses}>
-              <CardTwo
-                data="Boards"
-                backgroundcolor="linear-gradient(#124883, #2a4897, #4c43a6, #7236ae, #9a16ae)"
-              />
-            </Grid>
-            <Grid item={true} sm={3} md={3} lg={3} />
+          <Grid
+            item={true}
+            xs={12}
+            md={2}
+            sm={12}
+            lg={2}
+            className={classes.courses}
+          >
+            <CardTwo />
+            {/* <CardOne
+              src="https://lh3.googleusercontent.com/G95O1stwK-5w-2Z9g34WpalYtlzGY8XiZQGHGhcyLxDGdPYD3IrQRePmOIppzv7uhT3OjjgFVD1jg21H6i8UrEZHEGHY7ttQluDRUg"
+              title="NTSE"
+              subheading=" National Talent Search Exam"
+              data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
+            /> */}
           </Grid>
-        </Hidden>
-        <Hidden only={["lg", "sm", "md"]}>
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} xs={1} />
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="PCCP"
-                backgroundcolor="linear-gradient(#3b3bf4, #0082ff, #00b0ff, #00d6ff, #08f6ec)"
-              />
-            </Grid>
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="SAT"
-                backgroundcolor="linear-gradient(#f4a93b, #f5ad33, #f6b129, #f6b51d, #f6b908)"
-              />
-            </Grid>
-            <Grid item={true} xs={1} />
+          <Grid
+            item={true}
+            xs={12}
+            md={2}
+            sm={12}
+            lg={2}
+            className={classes.courses}
+          >
+            <CardTwo />
+            {/* <CardOne
+              src="http://www.ieso-info.org/wp-content/uploads/2018/10/2019-Logo.jpg"
+              title="IESO"
+              subheading="International Earth Science Olympiad"
+              data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
+            /> */}
           </Grid>
-
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} xs={1} />
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="XI/XII"
-                backgroundcolor="linear-gradient(#051937, #004d7a, #008793, #00bf72, #a8eb12)"
-              />
-            </Grid>
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="JEE MAINS"
-                backgroundcolor="linear-gradient(#e51f16, #fe0046, #ff0077, #ff00ae, #f403e9)"
-              />
-            </Grid>
-            <Grid item={true} xs={1} />
+          <Grid
+            item={true}
+            xs={12}
+            md={2}
+            sm={12}
+            lg={2}
+            className={classes.courses}
+          >
+            <CardTwo />
+            {/* <CardOne
+              src="https://schools.aglasem.com/wp-content/uploads/2014/03/IMO.jpg?w=640"
+              title="IMO"
+              subheading="International Maths Olympiad"
+              data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
+            /> */}
           </Grid>
-        </Hidden>
-        <Hidden only={["lg", "sm", "md"]}>
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} xs={1} />
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="NEET"
-                backgroundcolor="linear-gradient(#6ecd60, #8cd952, #ace341, #cfec2b, #f4f403)"
-              />
-            </Grid>
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="Olympiads"
-                backgroundcolor="linear-gradient(#d316e5, #ff0086, #ff5f1f, #f0b300, #8deb12)"
-              />
-            </Grid>
-            <Grid item={true} xs={1} />
+          <Grid item={true} xs={12} md={2} sm={2} lg={2} />
+          {/* <br /> */}
+        </Grid>
+        {/* <br /> */}
+        {/* <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={classes.curve}
+          viewBox="0 0 1440 68"
+          enable-background="new 0 0 1440 68"
+        >
+          <path
+            d="m1622.3 1937.7c0 0-410.7 169.1-913.4 75.5-502.7-93.6-977.7 56.3-977.7 56.3v440h1891.1v-571.8"
+            fill="#F4F5F7"
+            transform="translate(0-1977)"
+          />
+        </svg> */}
+        {/* <br />
+        <br /> */}
+        {/* <Grid container={true} className={classes.root}>
+          <Grid item={true} xs={12} md={1} />
+          <Grid item={true} xs={12} md={5}>
+            <Typography
+              gutterBottom={true}
+              variant="h4"
+              component="h3"
+              align="center"
+            >
+              Admission Counselling
+            </Typography>
+            <br />
           </Grid>
-          <Grid container={true} direction="row" spacing={16}>
-            <Grid item={true} xs={1} />
-            <Grid item={true} xs={5} className={classes.courses}>
-              <CardTwo
-                data="Boards"
-                backgroundcolor="linear-gradient(#124883, #2a4897, #4c43a6, #7236ae, #9a16ae)"
-              />
-            </Grid>
-            <Grid item={true} xs={1} />
+          <Grid item={true} md={6} />
+        </Grid>
+        <br />
+        <Grid container={true} className={classes.gridthree} direction="row">
+          <Grid item={true} md={2} />
+          <Grid xs={12} md={3} sm={4} className={classes.courses}>
+            <CardThree
+              heading="PCCP"
+              data="Visitors / students are counselled about the admission eligibility ,process , fees , test patterns , and academic syllabus."
+            />
           </Grid>
-        </Hidden>
+          <Grid xs={12} md={3} sm={4} className={classes.courses}>
+            <CardThree
+              heading="Key features of the organization"
+              data="Experienced IITian’s faculties and their academic inputs , unique teaching methodology and discipline , students support ."
+            />
+          </Grid>
+          <Grid xs={12} md={3} sm={4} className={classes.courses}>
+            <CardThree
+              heading="Results and achievements"
+              data="Results of pccp and past achievements are highlighted."
+            />
+          </Grid>
+          <Grid item={true} xs={12} md={1} />
+          <br />
+        </Grid>
+        <br />
+        <Grid
+          container={true}
+          className={classes.gridthree}
+          direction="row"
+          spacing={8}
+        >
+          <Grid item={true} xs={12} md={2} />
+          <Grid xs={12} md={3} sm={4}>
+            <CardThree
+              heading="Career stream selection "
+              data="Students are advised an appropriate stream as per their aptitude , past academic performance and interest."
+            />
+          </Grid>
+          <Grid xs={12} md={3} sm={4}>
+            <CardThree
+              heading="Performance"
+              data="Students are guided appropriately to help fill gap between actual and desired performance and are advised accordingly."
+            />
+          </Grid>
+          <Grid xs={12} md={3} sm={4}>
+            <CardThree
+              heading="Wide spectrum of competitive exams"
+              data="Students are briefed about various competitive exams and how to crack them successfully."
+            />
+          </Grid>
+          <Grid item={true} xs={12} md={1} />
+          <br />
+        </Grid> */}
+        {/* <br />
+        <br /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={classes.curve}
@@ -346,7 +364,7 @@ class SectionThree extends React.Component<Props> {
             <CardFour
               image="https://wac-cdn.atlassian.com/dam/jcr:6b78f16b-3f24-4546-852f-22e829f24b9a/Grad@2x.png?cdnVersion=kx"
               heading="Why Students Need STREE Education"
-              data={data4}
+              data="Every student upon completing their board exams look forward to professional entrance coaching. Parents in UAE realize that their children would get the best coaching at the best institute in UAE and Dubai. But how will anyone decide which institute is best? "
             />
           </Grid>
 
@@ -354,14 +372,14 @@ class SectionThree extends React.Component<Props> {
             <CardFour
               image="https://wac-cdn.atlassian.com/dam/jcr:6b78f16b-3f24-4546-852f-22e829f24b9a/Grad@2x.png?cdnVersion=kx"
               heading="STREE Education Provides"
-              data={data5}
+              data="Good training through an established brand – Resonance, one of the leading institutions with experienced faculty along with updated course contents. We ensure appreciable student-lecturer relationship which is considered the best in coaching process."
             />
           </Grid>
           <Grid item={true} xs={12} md={4} className={classes.courses}>
             <CardFour
               image="https://wac-cdn.atlassian.com/dam/jcr:6b78f16b-3f24-4546-852f-22e829f24b9a/Grad@2x.png?cdnVersion=kx"
               heading="Benefits of Joining STREE Education"
-              data={data6}
+              data="•	Our Academic Partners are Resonance , one of the reputed Coaching institutions in India."
             />
           </Grid>
           <Grid item={true} xs={12} md={1} />

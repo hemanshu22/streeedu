@@ -1,21 +1,35 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 // import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
 // import CardContent from "@material-ui/core/CardContent";
-import pccpimage from "../../../../../utils/img/pccp.png";
+// import Paper from "@material-ui/core/Paper";
 
 const styles = (theme: any) =>
   createStyles({
     paper: {
       backgroundColor: "#f7f7f7",
+
       height: "auto"
     },
-    pccp: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
+    card: {
+      //   padding: "10%",
+      backgroundColor: "#fff",
+      borderRadius: "5px",
+      boxShadow:
+        "0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12)"
+    },
+    typoone: {
+      color: "#253858",
+      fontFamily:
+        "Charlie Display,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif",
+      fontWeight: 500
+    },
+    typosecond: {
+      fontfamily:
+        "Charlie Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif",
+      fontSize: "20px"
     }
   });
 
@@ -32,18 +46,9 @@ class SectionOne extends React.Component<Props> {
         <br />
         <br />
         <Grid container={true}>
-          <Grid item={true} xs={2} sm={2} md={2} lg={2} />
-
-          <Grid
-            item={true}
-            xs={8}
-            sm={8}
-            md={8}
-            lg={8}
-            className={classes.pccp}
-          >
-            <img src={pccpimage} style={{ width: "116%" }} />
-            {/* <Typography
+          <Grid item={true} xs={2} md={2} />
+          <Grid item={true} xs={8} md={8}>
+            <Typography
               gutterBottom={true}
               variant="h3"
               component="h2"
@@ -64,9 +69,9 @@ class SectionOne extends React.Component<Props> {
               selected in first attempt in various competitive examinations like
               Engineering (JEE -Main & Advanced), Medical entrance (NEET), CAT
               and other Management test.
-            </Typography> */}
+            </Typography>
           </Grid>
-          <Grid item={true} xs={2} sm={2} md={2} lg={2} />
+          <Grid item={true} xs={2} md={2} />
         </Grid>
         <br />
         <br />

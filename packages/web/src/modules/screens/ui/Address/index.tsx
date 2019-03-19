@@ -5,28 +5,10 @@ import Typography from "@material-ui/core/Typography";
 import Screen from "../../../../utils/components/Screen";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
-// import List from "@material-ui/core/List";
-// import ListItem from "@material-ui/core/ListItem";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import SendIcon from "@material-ui/icons/Send";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) =>
   createStyles({
-    button: {
-      margin: theme.spacing.unit,
-      color: "#0052CC"
-    },
-
-    fontStyle: {
-      fontSize: "18px"
-    },
-
-    typofontStyle: {
-      fontSize: "15px",
-      fontweight: "300",
-      fontStyle: "italic",
-      lineHeight: "23px"
-    },
     map: {
       position: "absolute",
       top: "0",
@@ -38,10 +20,13 @@ const styles = (theme: any) =>
     mapcard: {
       position: "relative",
       overflow: "hidden",
-      paddingTop: "56.25%"
+      paddingTop: "30%"
     },
     centerStyle: {
       justifyContent: "center"
+    },
+    center: {
+      color: "red"
     }
   });
 
@@ -52,27 +37,44 @@ class Address extends React.Component<Props> {
     return (
       <Screen title="address">
         <div>
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={10}>
-              <Typography variant="headline" gutterBottom={true} align="center">
-                Addresses
-              </Typography>
+          <Hidden only={["xs", "sm", "md"]}>
+            <br />
+            <br />
+            <Grid container={true} spacing={8} className={classes.centerStyle}>
+              <Grid item={true} lg={12}>
+                <Typography
+                  variant="display1"
+                  gutterBottom={true}
+                  align="center"
+                >
+                  Addresses
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={10}>
-              <Typography variant="title" gutterBottom={true}>
-                STREE Training Center
-              </Typography>
-              <Typography variant="body1" gutterBottom={true}>
-                #102 & 104, Arenco Building Block -B,
-                <br /> Zabeel Road, Karama, Dubai (UAE).
-              </Typography>
+            <br />
+          </Hidden>
+          <Hidden only={["lg"]}>
+            <Grid container={true} spacing={8} className={classes.centerStyle}>
+              <Grid item={true} xs={12} sm={10} md={10}>
+                <Typography
+                  variant="display1"
+                  gutterBottom={true}
+                  align="center"
+                >
+                  Addresses
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
-          <br />
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={12} xs={12} md={10} lg={10}>
+            <br />
+          </Hidden>
+          <Grid container={true} spacing={8}>
+            <Grid item={true} md={1} lg={1} sm={1} />
+            <Grid item={true} md={4} lg={4} sm={4} xs={12}>
+              <Typography variant="title" gutterBottom={true} align="left">
+                LOCATION MAP
+              </Typography>
+              <br />
+              <br />
               <Card>
                 <CardContent className={classes.mapcard}>
                   <iframe
@@ -81,21 +83,8 @@ class Address extends React.Component<Props> {
                   />
                 </CardContent>
               </Card>
-            </Grid>
-          </Grid>
-          <br />
-          <br />
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={10}>
-              <Typography variant="body1" gutterBottom={true}>
-                #803-B & D, IBN Gate Office Jebel Ali,
-                <br /> Dubai (UAE).
-              </Typography>
-            </Grid>
-          </Grid>
-          <br />
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={12} xs={12} md={10} lg={10}>
+              <br />
+              <br />
               <Card>
                 <CardContent className={classes.mapcard}>
                   <iframe
@@ -104,22 +93,8 @@ class Address extends React.Component<Props> {
                   />
                 </CardContent>
               </Card>
-            </Grid>
-          </Grid>
-          <br />
-          <br />
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={10}>
-              <Typography variant="body1" gutterBottom={true}>
-                #504, Seven Heaven Building,
-                <br /> King Abdul Aziz Street, <br />
-                Sharjah (UAE).
-              </Typography>
-            </Grid>
-          </Grid>
-          <br />
-          <Grid container={true} spacing={8} className={classes.centerStyle}>
-            <Grid item={true} sm={12} xs={12} md={10} lg={10}>
+              <br />
+              <br />
               <Card>
                 <CardContent className={classes.mapcard}>
                   <iframe
@@ -129,8 +104,71 @@ class Address extends React.Component<Props> {
                 </CardContent>
               </Card>
             </Grid>
+            <Grid item={true} md={2} lg={2} sm={2} />
+            <Grid item={true} md={4} lg={4} sm={4} xs={12}>
+              <Typography variant="title" gutterBottom={true} align="left">
+                CONTACT INFO
+              </Typography>
+              <Typography variant="caption" gutterBottom={true} align="left">
+                Welcome to our Website.We are glad to have you around.
+              </Typography>
+              <br />
+              <br />
+              <Typography variant="title" gutterBottom={true} align="left">
+                Dubai
+              </Typography>
+              <br />
+              <Typography
+                variant="button"
+                gutterBottom={true}
+                align="left"
+                className={classes.center}
+              >
+                Karama
+              </Typography>
+              <Typography variant="body2" gutterBottom={true} align="left">
+                #102 & 104, Arenco Building Block -B,
+                <br /> Zabeel Road, Karama, Dubai (UAE).
+                <br />
+                Contact #04-3370568.
+              </Typography>
+              <br />
+
+              <Typography
+                variant="button"
+                gutterBottom={true}
+                align="left"
+                className={classes.center}
+              >
+                IBN Gate
+              </Typography>
+              <Typography variant="body2" gutterBottom={true} align="left">
+                #803-B & D, IBN Gate Office Jebel Ali,
+                <br />
+                Dubai (UAE).
+                <br />
+                Contact #04-3370568.
+              </Typography>
+              <br />
+
+              <Typography
+                variant="button"
+                gutterBottom={true}
+                align="left"
+                className={classes.center}
+              >
+                Sharjah
+              </Typography>
+              <Typography variant="body2" gutterBottom={true} align="left">
+                #504, Seven Heaven Building,
+                <br />
+                King Abdul Aziz Street, Sharjah (UAE).
+                <br />
+                Contact #04-3370568.
+              </Typography>
+            </Grid>
+            <Grid item={true} md={1} lg={1} sm={1} xs={12} />
           </Grid>
-          <br />
         </div>
       </Screen>
     );
