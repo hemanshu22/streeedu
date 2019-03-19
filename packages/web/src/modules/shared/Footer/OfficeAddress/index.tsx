@@ -63,8 +63,9 @@ class OfficeAddress extends React.Component<Props> {
           gutterBottom={true}
           className={classes.footer}
         >
-          Sheikh Rashid Road,Garhoud,
-          <br /> Dubai (UAE).
+          #803-B & D, IBN Gate Office Jebel Ali,
+          <br />
+          Dubai (UAE).
         </Typography>
         <Divider className={classes.divider} />
         <br />

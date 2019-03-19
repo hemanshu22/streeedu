@@ -40,7 +40,8 @@ class OurTeam extends React.Component<Props> {
     open5: false,
     open6: false,
     open7: false,
-    open8: false
+    open8: false,
+    open9: false
   };
 
   handleClickOpen1 = () => {
@@ -98,12 +99,18 @@ class OurTeam extends React.Component<Props> {
   handleClose8 = () => {
     this.setState({ open8: false });
   };
+  handleClickOpen9 = () => {
+    this.setState({ open9: true });
+  };
+  handleClose9 = () => {
+    this.setState({ open9: false });
+  };
   render() {
     const { classes } = this.props;
     return (
       <Screen title="Our Team">
         <div>
-          <Hidden only={["xs", "sm","md"]}>
+          <Hidden only={["xs", "sm", "md"]}>
             <br />
             <br />
           </Hidden>
@@ -286,6 +293,28 @@ class OurTeam extends React.Component<Props> {
               <br />
               <Typography variant="body2" gutterBottom={true}>
                 Naveena Manohara
+              </Typography>
+            </Grid>
+
+            <Grid item={true} xs={12} md={3} sm={6}>
+              <Button
+                variant="outlined"
+                style={{ borderColor: "#fff" }}
+                color="primary"
+                onClick={this.handleClickOpen9}
+              >
+                <img
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    borderRadius: "100px"
+                  }}
+                  src="http://www.streeedu.com/img/stree/tm2.jpg"
+                />
+              </Button>
+              <br />
+              <Typography variant="body2" gutterBottom={true}>
+                Suresh Sood
               </Typography>
             </Grid>
           </Grid>
@@ -565,6 +594,34 @@ class OurTeam extends React.Component<Props> {
             </DialogContent>
             <DialogActions>
               <Button onClick={this.handleClose8} color="primary">
+                Close
+              </Button>
+            </DialogActions>
+          </Dialog>
+
+          <Dialog
+            open={this.state.open9}
+            onClose={this.handleClose9}
+            aria-labelledby="form-dialog-title"
+          >
+            <DialogTitle id="form-dialog-title">SURESH SOOD</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                <Typography variant="button" gutterBottom={true}>
+                  Director
+                </Typography>
+                <Typography variant="button" gutterBottom={true}>
+                  Qualification: MSC
+                </Typography>
+              </DialogContentText>
+              <DialogContentText>
+                Expert in Chemistry, holding MSC, Mphil in Chemistry, having 12
+                years teaching experience for CBSE / ICSE and IGCSE & IB
+                students . He is an academic advisor for STREE Training Center.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={this.handleClose9} color="primary">
                 Close
               </Button>
             </DialogActions>

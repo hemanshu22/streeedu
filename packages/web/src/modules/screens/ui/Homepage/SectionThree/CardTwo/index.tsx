@@ -1,22 +1,26 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
-    list: {
-      color: "white",
-      fontSize: "16px",
-      marginBottom: "10px",
-      padding: "20px",
-      listStyleType: "none",
-      fontFamily:
-        "Charlie Display,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif",
-      fontWeight: 500
+    circular: {
+      borderRadius: "50%",
+      width: "120px",
+      height: "120px",
+      textAlign: "center"
+    },
+    text: {
+      color: "#fff",
+      lineHeight: 4.5,
+      textShadow: "0px 7px 30px #191818;"
     }
   });
 
 interface Props extends WithStyles<typeof styles> {
   data: any;
+  backgroundcolor: any;
 }
 class CardTwo extends React.Component<Props> {
   state = {
@@ -26,19 +30,19 @@ class CardTwo extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <li className={classes.list}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
+      <Paper
+        className={classes.circular}
+        style={{ background: this.props.backgroundcolor }}
+      >
+        <Typography
+          variant="h5"
+          component="h3"
+          align="center"
+          className={classes.text}
         >
-          <path fill="#ffffff" d="M0 0h20v20H0z" />
-          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
-        </svg>
-        &nbsp; &nbsp;
-        {this.props.data}
-      </li>
+          {this.props.data}
+        </Typography>
+      </Paper>
     );
   }
 }
