@@ -32,7 +32,7 @@ interface FormValues {
   school: string;
   parentname: string;
   area: string;
-  mobile: number;
+  mobile: number | null;
   grade: string;
   enquiry: string;
 }
@@ -311,7 +311,7 @@ const Comp = withFormik<Props, FormValues>({
     school: "",
     parentname: "",
     area: "",
-    mobile: 0,
+    mobile: null,
     grade: "",
     enquiry: ""
   }),

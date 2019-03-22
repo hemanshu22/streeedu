@@ -29,7 +29,7 @@ interface FormValues {
   school: string;
   classs: string;
   area: string;
-  mobile: number;
+  mobile: number | null;
 }
 
 interface Props extends WithStyles<typeof loginStyle> {
@@ -271,7 +271,7 @@ const Comp = withFormik<Props, FormValues>({
     school: "",
     classs: "",
     area: "",
-    mobile: 0
+    mobile: null
   }),
   handleSubmit: async (values, { props, setErrors, resetForm }) => {
     props.showLoader();
