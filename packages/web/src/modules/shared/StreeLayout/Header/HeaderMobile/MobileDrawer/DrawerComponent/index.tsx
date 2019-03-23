@@ -88,7 +88,7 @@ class DrawerComponent extends React.Component<Props> {
             <ListItemIcon>
               <GroupIcon />
             </ListItemIcon>
-            <Typography variant="title" align="center">
+            <Typography variant="body2" align="center">
               About Us
             </Typography>
 
@@ -131,7 +131,7 @@ class DrawerComponent extends React.Component<Props> {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Typography variant="title" align="center">
+            <Typography variant="body2" align="center">
               Courses
             </Typography>
             {this.state.courses ? <ExpandLess /> : <ExpandMore />}
@@ -215,7 +215,7 @@ class DrawerComponent extends React.Component<Props> {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Typography variant="title" align="center">
+            <Typography variant="body2" align="center">
               Academics
             </Typography>
             {this.state.academics ? <ExpandLess /> : <ExpandMore />}
@@ -297,7 +297,7 @@ class DrawerComponent extends React.Component<Props> {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Typography variant="title" align="center">
+            <Typography variant="body2" align="center">
               Gallery
             </Typography>
           </ListItem>
@@ -306,7 +306,7 @@ class DrawerComponent extends React.Component<Props> {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Typography variant="title" align="center">
+            <Typography variant="body2" align="center">
               <Link href="/faq" style={{ textDecoration: "none" }}>
                 Faq
               </Link>
