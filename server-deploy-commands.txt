@@ -1,0 +1,9 @@
+-> docker build -t ajay/abb:1.0.0 .
+
+-> docker run -p 3001:4000 --net="host" -d ajay/abb:1.0.0
+
+-> heroku login
+
+-> heroku container:login
+
+-> ./deploy_server_heroku.sh
