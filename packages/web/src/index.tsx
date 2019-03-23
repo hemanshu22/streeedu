@@ -1,30 +1,20 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+// import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "react-apollo";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import registerServiceWorker from "./registerServiceWorker";
 import { client } from "./apollo";
+import StreeLayout from "./modules/shared/StreeLayout";
 import { Routes } from "./routes";
-import Header from "./modules/shared/Header";
 import { Theme } from "./modules/shared/Theme";
-import Footer from "./modules/shared/Footer";
-import Hidden from "@material-ui/core/Hidden";
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <MuiThemeProvider theme={Theme}>
-      <Header />
-      <Hidden only={["xs", "sm", "md"]}>
-        <br />
-        <br />
-        <br />
-        <br />
-      </Hidden>
-      <Hidden only={["lg", "xl"]}>
-        <br />
-      </Hidden>
-      <Routes />
-      <Footer />
+      <StreeLayout>
+        <Routes />
+      </StreeLayout>
     </MuiThemeProvider>
   </ApolloProvider>,
   document.getElementById("root") as HTMLElement

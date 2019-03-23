@@ -195,7 +195,12 @@ class AboutPccp extends React.Component<Props> {
           </Grid>
 
           <br />
-          <Grid container={true} spacing={8} className={classes.grid_cen}>
+          <Grid
+            container={true}
+            spacing={8}
+            className={classes.grid_cen}
+            style={{ display: "flex" }}
+          >
             <Grid item={true} sm={10} xs={12}>
               <Typography variant="button" gutterBottom={true}>
                 CORE FEATURES
@@ -205,7 +210,7 @@ class AboutPccp extends React.Component<Props> {
 
           <Grid container={true} spacing={8} className={classes.grid_cen}>
             <Grid item={true} sm={5} xs={12}>
-              <Card>
+              <Card style={{ height: "100%" }}>
                 <CardContent>
                   <List disablePadding={true}>
                     <ListItem button={true}>
@@ -298,10 +303,8 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Concept building through theory,illustrations and
-                        derivations in the classes using UNIQUE TEACHING
-                        METHODOLOGY to clear all the basic doubts and building
-                        strong foundation for future.
+                        Every student’s progress is tracked by giving a constant
+                        feedback on their performance in the tests.
                       </Typography>
                     </ListItem>
 
@@ -314,7 +317,10 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Comprehensive & best study material.
+                        PTSM ensures periodic communication among the parents,
+                        teachers and students. Through this meeting, parents get
+                        feedback about the strengths and weaknesses of their
+                        ward.
                       </Typography>
                     </ListItem>
 
@@ -327,8 +333,9 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Series of Worksshops & mock tests for best preparation
-                        of various competitive exams
+                        There is provision of motivational classes within the
+                        curriculum which is required to keep the students on
+                        track and motivate them to aspire for success.
                       </Typography>
                     </ListItem>
 
@@ -341,9 +348,9 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Doubt clearing sessions and regular academic feedback of
-                        home work checking with verification throught parents
-                        signature.
+                        STREE - Resonance used to connect with parents to inform
+                        them about daily updates, test, homework information,
+                        workshop & competitive exams details etc.
                       </Typography>
                     </ListItem>
 
@@ -356,9 +363,10 @@ class AboutPccp extends React.Component<Props> {
                         gutterBottom={true}
                         className={classes.h1Style}
                       >
-                        Daily practice problems (DPPs) are discussed in
-                        classrooms to challenge students in time bound manner to
-                        boost revision of the students.
+                        At times, students get stuck with their personal
+                        problems and need guidance to overcome that situation,
+                        we conduct one-o-one counseling sessions & customized
+                        solutions are given to them.
                       </Typography>
                     </ListItem>
                   </List>
