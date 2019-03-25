@@ -47,12 +47,13 @@ class CardOne extends React.Component<Props> {
         <Typography
           variant="headline"
           component="h3"
+          align="center"
           className={classes.fontcolor}
         >
           {this.props.title}
         </Typography>
         <br />
-        <Typography variant="body1" component="h3">
+        <Typography variant="body1" component="h3" align="center">
           {this.props.subheading}
         </Typography>
         <br />
