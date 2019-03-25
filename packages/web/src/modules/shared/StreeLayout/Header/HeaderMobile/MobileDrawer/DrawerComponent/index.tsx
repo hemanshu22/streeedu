@@ -7,9 +7,14 @@ import Typography from "@material-ui/core/Typography";
 import ListItem from "@material-ui/core/ListItem";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+import LibraryBooks from "@material-ui/icons/LibraryBooks";
+import CameraEnhance from "@material-ui/icons/CameraEnhance";
+import Label from "@material-ui/icons/Label";
+import QuestionAnswer from "@material-ui/icons/QuestionAnswer";
+import Assignment from "@material-ui/icons/Assignment";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
-import InboxIcon from "@material-ui/icons/Inbox";
+// import InboxIcon from "@material-ui/icons/Inbox";
 import GroupIcon from "@material-ui/icons/Group";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 
@@ -107,7 +112,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/ourteam" style={{ textDecoration: "none" }}>
@@ -117,7 +122,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/success" style={{ textDecoration: "none" }}>
@@ -129,7 +134,7 @@ class DrawerComponent extends React.Component<Props> {
           <Divider />
           <ListItem button={true} onClick={this.handleCourseClick}>
             <ListItemIcon>
-              <InboxIcon />
+              <Assignment />
             </ListItemIcon>
             <Typography variant="body2" align="center">
               Courses
@@ -140,7 +145,7 @@ class DrawerComponent extends React.Component<Props> {
           <Collapse in={this.state.courses} timeout="auto" unmountOnExit={true}>
             <ListItem button={true}>
               <ListItemIcon>
-                <GroupIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/pccp" style={{ textDecoration: "none" }}>
@@ -150,7 +155,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/sat" style={{ textDecoration: "none" }}>
@@ -160,7 +165,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/xii" style={{ textDecoration: "none" }}>
@@ -170,7 +175,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/jeemain" style={{ textDecoration: "none" }}>
@@ -180,7 +185,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/neet" style={{ textDecoration: "none" }}>
@@ -190,7 +195,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/olympiads" style={{ textDecoration: "none" }}>
@@ -200,7 +205,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/boards" style={{ textDecoration: "none" }}>
@@ -213,7 +218,7 @@ class DrawerComponent extends React.Component<Props> {
           <Divider />
           <ListItem button={true} onClick={this.handleAcademicClick}>
             <ListItemIcon>
-              <InboxIcon />
+              <LibraryBooks />
             </ListItemIcon>
             <Typography variant="body2" align="center">
               Academics
@@ -227,7 +232,7 @@ class DrawerComponent extends React.Component<Props> {
           >
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link
@@ -240,7 +245,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link
@@ -253,7 +258,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem>
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/methodology" style={{ textDecoration: "none" }}>
@@ -273,7 +278,7 @@ class DrawerComponent extends React.Component<Props> {
             </ListItem> */}
             <ListItem button={true}>
               <ListItemIcon>
-                <InboxIcon />
+                <Label />
               </ListItemIcon>
               <Typography variant="body1" align="center">
                 <Link href="/analysis" style={{ textDecoration: "none" }}>
@@ -295,7 +300,7 @@ class DrawerComponent extends React.Component<Props> {
           <Divider />
           <ListItem button={true}>
             <ListItemIcon>
-              <InboxIcon />
+              <CameraEnhance />
             </ListItemIcon>
             <Typography variant="body2" align="center">
               Gallery
@@ -304,7 +309,7 @@ class DrawerComponent extends React.Component<Props> {
           <Divider />
           <ListItem button={true}>
             <ListItemIcon>
-              <InboxIcon />
+              <QuestionAnswer />
             </ListItemIcon>
             <Typography variant="body2" align="center">
               <Link href="/faq" style={{ textDecoration: "none" }}>

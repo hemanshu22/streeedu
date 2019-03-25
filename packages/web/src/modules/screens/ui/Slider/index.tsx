@@ -3,16 +3,18 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Carousel from "nuka-carousel";
 import image1 from "../../../../utils/img/l1.jpg";
 import image2 from "../../../../utils/img/l2.jpg";
-// import image3 from "../../../../utils/img/bg3.jpg";
-// import image4 from "../../../../utils/img/bg.jpg";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
+import Fab from "@material-ui/core/Fab";
 
-const styles = () =>
+const styles = (theme: any) =>
   createStyles({
+    fab: {
+      margin: theme.spacing.unit,
+      backgroundColor: "white"
+    },
     root: {
       flexGrow: 1
-    },
-    "slider-control-centerleft button": {
-      backgroundColor: "red"
     }
   });
 
@@ -23,9 +25,38 @@ class Slider extends React.Component<Props> {
   state = {
     slideIndex: 0
   };
-
+  handleCenterLeftControls = ({ previousSlide }: any) => {
+    return (
+      <Fab
+        style={{
+          backgroundColor: "white",
+          width: 46,
+          height: 46,
+          left: "15px"
+        }}
+        onClick={previousSlide}
+      >
+        <KeyboardArrowLeftIcon />
+      </Fab>
+    );
+  };
+  handleCenterRightControls = ({ nextSlide }: any) => {
+    return (
+      <Fab
+        aria-label="Add"
+        style={{
+          backgroundColor: "white",
+          width: 46,
+          height: 46,
+          right: "15px"
+        }}
+        onClick={nextSlide}
+      >
+        <KeyboardArrowRightIcon />
+      </Fab>
+    );
+  };
   render() {
-    //  const { classes } = this.props;
     return (
       <Carousel
         autoplay={false}
@@ -33,6 +64,8 @@ class Slider extends React.Component<Props> {
         slideIndex={this.state.slideIndex}
         dragging={true}
         swiping={true}
+        renderCenterLeftControls={this.handleCenterLeftControls}
+        renderCenterRightControls={this.handleCenterRightControls}
       >
         <img src={image1} />
         <img src={image2} />
