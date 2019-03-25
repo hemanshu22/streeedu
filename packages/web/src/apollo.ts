@@ -6,7 +6,7 @@ export const client = new ApolloClient({
   link: new HttpLink({
     credentials: "include",
    // uri: process.env.REACT_APP_SERVER_URL
-   uri: "http://polar-journey-65278.herokuapp.com/"
+   uri: "https://polar-journey-65278.herokuapp.com/"
   }),
   cache: new InMemoryCache()
 });
