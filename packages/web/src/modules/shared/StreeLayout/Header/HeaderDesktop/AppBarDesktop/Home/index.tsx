@@ -8,7 +8,7 @@ const styles = (theme: any) =>
   createStyles({
     home: {
       margin: theme.spacing.unit,
-      color: "black"
+      color: "#86576b"
     }
   });
 

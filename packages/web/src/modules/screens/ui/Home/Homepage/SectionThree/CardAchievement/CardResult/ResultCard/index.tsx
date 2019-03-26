@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 const styles = (theme: any) =>
   createStyles({
     paper: {
-      maxWidth: "200px",
+      maxWidth: "215px",
       height: "auto",
       padding: "17px",
       backgroundColor: "#fafafa"
