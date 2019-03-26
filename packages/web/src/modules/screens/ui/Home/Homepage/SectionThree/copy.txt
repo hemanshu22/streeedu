@@ -252,7 +252,7 @@ class SectionThree extends React.Component<Props> {
               title="PCCP"
               subheading="Pre-Foundation Career Care Programme"
               link="pccp"
-              backgroundcolor="#880e4f"
+              backgroundcolor="#F9DAE3"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -262,7 +262,7 @@ class SectionThree extends React.Component<Props> {
               title="SAT"
               subheading="Scholastic Aptitude Test"
               link="sat"
-              backgroundcolor="#f44336"
+              backgroundcolor="#DAF7A6"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -272,7 +272,7 @@ class SectionThree extends React.Component<Props> {
               title="XI/XII"
               subheading="XI/XII"
               link="xii"
-              backgroundcolor="#3f51b5"
+              backgroundcolor="#EEFFA0"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -282,7 +282,7 @@ class SectionThree extends React.Component<Props> {
               title="JEE MAIN"
               subheading="Engineering"
               link="jeemain"
-              backgroundcolor="#009688"
+              backgroundcolor="#E9E6FF"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -301,7 +301,7 @@ class SectionThree extends React.Component<Props> {
               title="NEET"
               subheading="Pre Medical"
               link="neet"
-              backgroundcolor="#e65100"
+              backgroundcolor="#FFBEBF"
               //  data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -311,7 +311,7 @@ class SectionThree extends React.Component<Props> {
               title="OLYMPIADS"
               subheading="International Olympiads"
               link="olympiads"
-              backgroundcolor="#00c853"
+              backgroundcolor="#CDFCFF"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
@@ -321,7 +321,7 @@ class SectionThree extends React.Component<Props> {
               title="BOARDS"
               subheading="National/International Boards"
               link="boards"
-              backgroundcolor="#795548"
+              backgroundcolor="#CBFECC"
               // data="is a competitive examination open to students of all countries in the world, primarily studying in secondary schools. All basic subjects of Science (Physics, Chemistry, Biology and Mathematics) are given roughly equal representation in the IJSO examination."
             />
           </Grid>
