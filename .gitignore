@@ -7,4 +7,5 @@ temp/
 dump.rdb
 dist
 .netlify
+.env
 yarn-error.log*
