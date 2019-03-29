@@ -52,7 +52,7 @@ class SocialMedia extends React.Component<Props> {
     return (
       <div className={classes.cardinner}>
         <Typography variant="h5" gutterBottom={true} className={classes.footer}>
-          Follow us on:
+          &nbsp;Follow us on:
         </Typography>
         <br />
         <Tooltip

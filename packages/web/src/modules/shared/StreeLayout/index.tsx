@@ -2,6 +2,7 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Header from "./Header";
 import Footer from "./Footer";
+// import Hidden from "@material-ui/core/Hidden";
 
 const styles = (theme: any) => createStyles({});
 
@@ -12,11 +13,9 @@ class StreeLayout extends React.Component<Props> {
     return (
       <React.Fragment>
         <Header />
-        <br />
-        <br /> <br />
-        <br /> <br />
-        <br />
-        <div>{this.props.children}</div>
+        <div style={{ position: "relative", zIndex: 10 }}>
+          {this.props.children}
+        </div>
         <Footer />
       </React.Fragment>
     );

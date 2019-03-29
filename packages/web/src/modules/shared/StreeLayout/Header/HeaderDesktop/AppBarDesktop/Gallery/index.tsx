@@ -1,6 +1,7 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -27,7 +28,7 @@ class Gallery extends React.Component<Props> {
     return (
       <div>
         <Button className={classes.button} variant="text">
-          Gallery
+          <Typography variant="button">Gallery</Typography>
         </Button>
       </div>
     );

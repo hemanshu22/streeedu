@@ -30,7 +30,6 @@ class SectionOne extends React.Component<Props> {
         <br />
         <Grid container={true}>
           <Grid item={true} xs={2} sm={2} md={2} lg={2} />
-
           <Grid
             item={true}
             xs={8}
@@ -40,28 +39,6 @@ class SectionOne extends React.Component<Props> {
             className={classes.pccp}
           >
             <img src={pccpimage} style={{ width: "116%" }} />
-            {/* <Typography
-              gutterBottom={true}
-              variant="h3"
-              component="h2"
-              align="center"
-              className={classes.typoone}
-            >
-              What we do for you
-            </Typography>
-            <Typography
-              variant="subheading"
-              component="h3"
-              align="center"
-              className={classes.typosecond}
-            >
-              STREE Training Center offers basics of Mathematics, Science and
-              Mental Ability. When developed at the early stage of learning,
-              immensely benefits students in securing top ranks and helps to get
-              selected in first attempt in various competitive examinations like
-              Engineering (JEE -Main & Advanced), Medical entrance (NEET), CAT
-              and other Management test.
-            </Typography> */}
           </Grid>
           <Grid item={true} xs={2} sm={2} md={2} lg={2} />
         </Grid>

@@ -7,6 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -47,7 +48,7 @@ class AboutUs extends React.Component<Props> {
           className={classes.button}
           onClick={this.handleToggle}
         >
-          About Us
+          <Typography variant="button">About Us</Typography>
         </Button>
         <Popper
           open={open}
@@ -62,16 +63,18 @@ class AboutUs extends React.Component<Props> {
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
                 <Link href="/aboutus" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>About Us</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">About Us</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/ourteam" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
-                    Academic Council
+                    <Typography variant="button">Academic Council</Typography>
                   </MenuItem>
                 </Link>
                 <Link href="/success" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
-                    Success Stories
+                    <Typography variant="button">Success Stories</Typography>
                   </MenuItem>
                 </Link>
               </MenuList>
