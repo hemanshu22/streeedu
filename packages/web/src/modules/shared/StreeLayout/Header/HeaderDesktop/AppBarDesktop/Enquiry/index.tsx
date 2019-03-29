@@ -7,8 +7,7 @@ import Typography from "@material-ui/core/Typography";
 const styles = (theme: any) =>
   createStyles({
     button: {
-      margin: theme.spacing.unit,
-      color: "#86576b"
+      margin: theme.spacing.unit
     },
     enquiry: {
       //  textAlign: "right"
@@ -34,7 +33,9 @@ class Enquiry extends React.Component<Props> {
       <div className={classes.enquiry}>
         <Link href="/enquiry" style={{ textDecoration: "none" }}>
           <Button className={classes.button} variant="outlined">
-            <Typography variant="button">ENQUIRY</Typography>
+            <Typography variant="button" style={{ color: "#86576b" }}>
+              ENQUIRY
+            </Typography>
           </Button>
         </Link>
       </div>
