@@ -112,7 +112,6 @@ class OurTeam extends React.Component<Props> {
         <div>
           <Hidden only={["xs", "sm", "md"]}>
             <br />
-            <br />
           </Hidden>
           <Typography variant="display1" gutterBottom={true} align="center">
             Academic Team

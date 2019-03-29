@@ -3,7 +3,6 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
-// import CardContent from "@material-ui/core/CardContent";
 import tree from "../../../../utils/img/tree.png";
 import Hidden from "@material-ui/core/Hidden";
 
@@ -14,7 +13,6 @@ const styles = (theme: any) =>
       color: "#0052CC"
     },
     card: {
-      minHeight: "124px",
       padding: "22px",
       display: "flex",
       alignItems: "center",
@@ -23,6 +21,10 @@ const styles = (theme: any) =>
     gridcontainer: {
       paddingRight: "10px",
       paddingLeft: "10px"
+    },
+    griditem: {
+      display: "flex",
+      alignItems: "stretch"
     }
   });
 
@@ -32,89 +34,79 @@ class TeachingMethodology extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <div>
-        <Hidden only={["sm", "xs", "lg"]}>
-          <br />
-          <br />
-          {/* <br />
-          <br /> */}
-          <Grid container={true} spacing={8}>
-            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="display1" gutterBottom={true} align="center">
-                Teaching Methodology
-              </Typography>
-            </Grid>
+        <br />
+        <Grid container={true} spacing={8}>
+          <Grid item={true} xs={12} sm={12} md={12} lg={12}>
+            <Typography variant="display1" gutterBottom={true} align="center">
+              Teaching Methodology
+            </Typography>
           </Grid>
-          <br />
-        </Hidden>
-        <Hidden only={["sm", "xs", "md"]}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Grid container={true} spacing={8}>
-            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="display1" gutterBottom={true} align="center">
-                Teaching Methodology
-              </Typography>
-            </Grid>
-          </Grid>
-          <br />
-        </Hidden>
-        <Hidden only={["md", "lg"]}>
-          <br />
-          <Grid container={true} spacing={8}>
-            <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="title" gutterBottom={true} align="center">
-                Teaching Methodology
-              </Typography>
-            </Grid>
-          </Grid>
-          <br />
-        </Hidden>
+        </Grid>
+        <br />
         <Grid container={true} spacing={16} className={classes.gridcontainer}>
-          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
+          <Grid
+            item={true}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={3}
+            className={classes.griditem}
+          >
             <Card className={classes.card}>
-              {/* <CardContent> */}
               <Typography variant="body1" gutterBottom={true}>
                 Our teaching pedagogy is so unique and it is not only restricted
                 to classroom program. We make the students proficient for
                 solving complex and hard problems by improving and sharpening
                 their analytical and logical thinking skills
               </Typography>
-              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
+          <Grid
+            item={true}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={3}
+            className={classes.griditem}
+          >
             <Card className={classes.card}>
-              {/* <CardContent> */}
               <Typography variant="body1" gutterBottom={true}>
                 Our teaching methodology is highly motivational, innovative and
                 interactive and designed in such a way that it suits specific
                 individual needs and make them think out of box which is pivotal
                 for success
               </Typography>
-              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
+          <Grid
+            item={true}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={3}
+            className={classes.griditem}
+          >
             <Card className={classes.card}>
-              {/* <CardContent> */}
               <Typography variant="body1" gutterBottom={true}>
                 Our lectures are developed in such a way that it is completed
                 and finished in stipulated time along with that, we make sure
                 the concepts are crystal clear for the students
               </Typography>
-              {/* </CardContent> */}
             </Card>
           </Grid>
-          <Grid item={true} xs={12} sm={6} md={6} lg={3}>
+          <Grid
+            item={true}
+            xs={12}
+            sm={6}
+            md={6}
+            lg={3}
+            className={classes.griditem}
+          >
             <Card className={classes.card}>
-              {/* <CardContent> */}
               <Typography variant="body1" gutterBottom={true}>
                 A continuous student evaluation is done through regular tests
                 and feedbacks are taken to get best out of them
               </Typography>
-              {/* </CardContent> */}
             </Card>
           </Grid>
         </Grid>
@@ -128,7 +120,7 @@ class TeachingMethodology extends React.Component<Props> {
           </Hidden>
           <Hidden only={["lg", "xs"]}>
             <Grid item={true} sm={12} md={12}>
-              <img src={tree} style={{ paddingLeft: "21%" }} />
+              <img src={tree} style={{ paddingLeft: "32%" }} />
             </Grid>
           </Hidden>
           <Hidden only={["sm", "xs", "md"]}>
@@ -136,7 +128,6 @@ class TeachingMethodology extends React.Component<Props> {
               <img src={tree} />
             </Grid>
           </Hidden>
-
           <Grid
             item={true}
             xs={12}
@@ -189,7 +180,7 @@ class TeachingMethodology extends React.Component<Props> {
             <br />
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
               <Typography variant="title" gutterBottom={true}>
-                Student satisfaction Survey
+                Student Satisfaction Survey
               </Typography>
               <Typography variant="body1" gutterBottom={true}>
                 Each student is given a freedom to write down their thoughts on

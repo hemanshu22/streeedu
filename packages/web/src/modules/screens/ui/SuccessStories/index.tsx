@@ -86,18 +86,12 @@ class SuccessStories extends React.Component<Props> {
     return (
       <Screen title="Success Stories">
         <div>
-          <Hidden only={["lg"]}>
-            <Typography variant="headline" gutterBottom={true} align="center">
-              Success Stories
-            </Typography>
-          </Hidden>
-          <Hidden only={["xs", "sm", "md"]}>
+        <Hidden only={["xs", "sm", "md"]}>
             <br />
-            <br />
-            <Typography variant="headline" gutterBottom={true} align="center">
-              Success Stories
-            </Typography>
           </Hidden>
+          <Typography variant="display1" gutterBottom={true} align="center">
+          Success Stories
+          </Typography>
           <br />
           <Grid container={true} justify="center" spacing={8}>
             <Grid item={true} xs={12} sm={4}>

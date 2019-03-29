@@ -54,30 +54,13 @@ class AboutUs extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <div className={classes.paper}>
-        <Hidden only={["lg", "md"]}>
-          <Grid container={true} direction="row">
-            <Grid item={true} xs={12} md={12}>
-              <Typography variant="display1" component="h2" align="center">
-                About Us
-              </Typography>
-            </Grid>
-          </Grid>
+        <Hidden only={["xs", "sm", "md"]}>
           <br />
         </Hidden>
-        <Hidden only={["xs", "sm"]}>
-          <br />
-          <br />
-          <br />
-          <Grid container={true} direction="row">
-            <Grid item={true} xs={12} md={12}>
-              <Typography variant="display1" component="h2" align="center">
-                About Us
-              </Typography>
-            </Grid>
-          </Grid>
-          <br />
-          <br />
-        </Hidden>
+        <Typography variant="display1" gutterBottom={true} align="center">
+          About Us
+        </Typography>
+        <br />
         <Grid container={true} direction="row">
           <Grid item={true} md={1} />
           <Hidden only={["lg", "md"]}>
@@ -91,8 +74,6 @@ class AboutUs extends React.Component<Props> {
               >
                 About STREE
               </Typography>
-              {/* <br />
-              <br /> */}
             </Grid>
           </Hidden>
           <Hidden only={["xs", "sm"]}>

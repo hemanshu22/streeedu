@@ -16,7 +16,6 @@ import Olympiads from "../modules/screens/ui/Olympiads";
 import Boards from "../modules/screens/ui/Boards";
 import XII from "../modules/screens/ui/XII";
 import KeyProcess from "../modules/screens/ui/KeyProcess";
-import Innovations from "../modules/screens/ui/Innovations";
 import Admissions from "../modules/screens/ui/Admissions";
 import FAQ from "../modules/screens/ui/FAQ";
 import Address from "../modules/screens/ui/Address";
@@ -24,7 +23,6 @@ import AcademicExcellence from "../modules/screens/ui/AcademicExcellence";
 import ExamInformation from "../modules/screens/ui/ExamInformation";
 import TeachingMethodology from "../modules/screens/ui/TeachingMethodology";
 import TestAnalysis from "../modules/screens/ui/TestAnalysis";
-// import StreeLayout from "../modules/shared/App/Layout/StreeLayout";
 
 export const Routes = () => (
   <BrowserRouter>
@@ -50,7 +48,6 @@ export const Routes = () => (
       <Route exact={true} path="/boards" component={Boards} />
       <Route exact={true} path="/xii" component={XII} />
       <Route exact={true} path="/key" component={KeyProcess} />
-      <Route exact={true} path="/innovative" component={Innovations} />
       <Route exact={true} path="/career" component={Admissions} />
       <Route exact={true} path="/faq" component={FAQ} />
       <Route exact={true} path="/address" component={Address} />

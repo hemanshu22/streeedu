@@ -29,7 +29,7 @@ class AcademicExcellence extends React.Component<Props> {
           <br /><br />
           <Grid container={true} spacing={8}>
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="headline" gutterBottom={true} align="center">
+              <Typography variant="display1" gutterBottom={true} align="center">
                 TEN COMMANDMENTS ON ACADEMIC EXCELLENCE
               </Typography>
             </Grid>
@@ -332,7 +332,7 @@ class AcademicExcellence extends React.Component<Props> {
           <br /><br />
           <Grid container={true} spacing={8}>
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="headline" gutterBottom={true} align="center">
+              <Typography variant="display1" gutterBottom={true} align="center">
                 TEN COMMANDMENTS ON ACADEMIC EXCELLENCE
               </Typography>
             </Grid>
@@ -634,12 +634,12 @@ class AcademicExcellence extends React.Component<Props> {
         <Hidden only={["xs","md","sm"]}>
           <br />
           <br />
+          {/* <br />
           <br />
-          <br />
-          <br />
+          <br /> */}
           <Grid container={true} spacing={8}>
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="headline" gutterBottom={true} align="center">
+              <Typography variant="display1" gutterBottom={true} align="center">
                 TEN COMMANDMENTS ON ACADEMIC EXCELLENCE
               </Typography>
             </Grid>
@@ -940,7 +940,7 @@ class AcademicExcellence extends React.Component<Props> {
           <br />
           <Grid container={true} spacing={8}>
             <Grid item={true} xs={12} sm={12} md={12} lg={12}>
-              <Typography variant="title" gutterBottom={true} align="center">
+              <Typography variant="display1" gutterBottom={true} align="center">
                 TEN COMMANDMENTS ON ACADEMIC EXCELLENCE
               </Typography>
             </Grid>
