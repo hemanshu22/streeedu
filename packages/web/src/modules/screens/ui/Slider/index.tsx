@@ -25,6 +25,23 @@ class Slider extends React.Component<Props> {
   state = {
     slideIndex: 0
   };
+
+  nextSlide = () => {
+    if (this.state.slideIndex === 3) {
+      this.setState({ slideIndex: 0 });
+    } else {
+      this.setState({ slideIndex: this.state.slideIndex + 1 });
+    }
+  };
+
+  previousSlide = () => {
+    if (this.state.slideIndex === 0) {
+      this.setState({ slideIndex: 0 });
+    } else {
+      this.setState({ slideIndex: this.state.slideIndex - 1 });
+    }
+  };
+
   handleCenterLeftControls = ({ previousSlide }: any) => {
     return (
       <Fab
@@ -34,7 +51,7 @@ class Slider extends React.Component<Props> {
           height: 46,
           left: "15px"
         }}
-        onClick={previousSlide}
+        onClick={this.previousSlide}
       >
         <KeyboardArrowLeftIcon />
       </Fab>
@@ -50,23 +67,26 @@ class Slider extends React.Component<Props> {
           height: 46,
           right: "15px"
         }}
-        onClick={nextSlide}
+        onClick={this.nextSlide}
       >
         <KeyboardArrowRightIcon />
       </Fab>
     );
   };
+
   render() {
     return (
       <Carousel
         autoplay={false}
-        autoplayInterval={1000}
+        autoplayInterval={5000}
         slideIndex={this.state.slideIndex}
         dragging={true}
         swiping={true}
         renderCenterLeftControls={this.handleCenterLeftControls}
         renderCenterRightControls={this.handleCenterRightControls}
       >
+        <img src={image1} />
+        <img src={image2} />
         <img src={image1} />
         <img src={image2} />
       </Carousel>
