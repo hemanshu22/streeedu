@@ -2,6 +2,7 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -31,7 +32,7 @@ class Workshop extends React.Component<Props> {
       <div>
         <Link href="/workshop" style={{ textDecoration: "none" }}>
           <Button className={classes.button} variant="contained">
-            WORKSHOP
+            <Typography variant="button">WORKSHOP</Typography>
           </Button>
         </Link>
       </div>

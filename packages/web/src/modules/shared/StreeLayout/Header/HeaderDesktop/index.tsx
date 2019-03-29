@@ -4,12 +4,22 @@ import AppBar from "@material-ui/core/AppBar";
 import AppBarDesktop from "./AppBarDesktop";
 import Logo from "../Logo";
 import Divider from "@material-ui/core/Divider";
+// import TextField from "@material-ui/core/TextField";
+// import Grid from "@material-ui/core/Grid";
+// import InputAdornment from "@material-ui/core/InputAdornment";
+// import Hidden from "@material-ui/core/Hidden";
+// import Search from "@material-ui/icons/Search";
+// import AppBar from "../../../../../utils/components/AppBar";
+// import Toolbar from "@material-ui/core/Toolbar";
 
 const styles = (theme: any) =>
   createStyles({
+    root: {
+      flexGrow: 1
+    },
     appbar: {
       backgroundColor: "#fff",
-      maxHeight: "126px"
+      maxHeight: "124px"
     }
   });
 
@@ -28,10 +38,9 @@ class HeaderDesktop extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="fixed" className={classes.appbar}>
+      <AppBar position="sticky" className={classes.appbar}>
         <Logo />
         <Divider />
-        <br />
         <AppBarDesktop />
       </AppBar>
     );

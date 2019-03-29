@@ -21,11 +21,9 @@ class Home extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      // <Button>
       <Link href="/" style={{ textDecoration: "none" }}>
         <HomeIcon className={classes.home} />
       </Link>
-      // </Button>
     );
   }
 }

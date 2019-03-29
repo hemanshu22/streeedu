@@ -49,6 +49,7 @@ class OfficeAddress extends React.Component<Props> {
           #102 & 104, Arenco Building Block -B,
           <br /> Zabeel Road, Karama, Dubai (UAE).
         </Typography>
+        <br />
         <Divider className={classes.divider} />
         <br />
         {/* <Typography
@@ -67,6 +68,7 @@ class OfficeAddress extends React.Component<Props> {
           <br />
           Dubai (UAE).
         </Typography>
+        <br />
         <Divider className={classes.divider} />
         <br />
         <Typography

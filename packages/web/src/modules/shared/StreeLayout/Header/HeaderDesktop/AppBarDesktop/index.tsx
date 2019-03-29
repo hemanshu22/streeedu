@@ -11,15 +11,14 @@ import Enquiry from "./Enquiry";
 
 const styles = (theme: any) =>
   createStyles({
-    appbar: {
-      backgroundColor: "#fff"
-    },
     headercontainer: {
       display: "flex",
       listStyleType: "none",
       paddingLeft: "0px",
-      marginBottom: "4px",
-      marginTop: "-11px"
+      position: "relative",
+      bottom: "10px"
+      // marginBottom: "4px"
+      // marginTop: "-11px"
     }
   });
 
@@ -32,7 +31,7 @@ class AppBarDesktop extends React.Component<Props> {
     const { classes } = this.props;
     return (
       <ul className={classes.headercontainer}>
-        <li style={{ margin: "5px" }}>
+        <li style={{ marginLeft: "5px", marginTop: "4px" }}>
           <Home />
         </li>
         <li>

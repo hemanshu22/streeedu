@@ -10,6 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Logo from "../../Logo";
 import Divider from "@material-ui/core/Divider";
+// import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -25,12 +26,6 @@ const styles = (theme: any) =>
     },
     appbarcolor: {
       backgroundColor: "white"
-      // boxShadow: "none"
-    },
-    appbarcolortop: {
-      background: "white",
-      position:"sticky"
-      // height: "107px"
     },
     menuicon: {
       color: "#000"
@@ -62,8 +57,7 @@ class AppBarMobile extends React.Component<Props> {
     const { classes } = this.props;
 
     return (
-      // <div className={classes.root}>
-      <AppBar  className={classes.appbarcolor}>
+      <AppBar position="sticky" className={classes.appbarcolor}>
         <Logo />
         <Divider />
         <Toolbar>
@@ -101,8 +95,6 @@ class AppBarMobile extends React.Component<Props> {
           </Grid>
         </Toolbar>
       </AppBar>
-
-      // </div>
     );
   }
 }

@@ -7,6 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -44,7 +45,7 @@ class Courses extends React.Component<Props> {
           className={classes.button}
           onClick={this.handleToggle}
         >
-          Courses
+          <Typography variant="button">Courses</Typography>
         </Button>
         <Popper
           open={open}
@@ -59,25 +60,39 @@ class Courses extends React.Component<Props> {
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
                 <Link href="/pccp" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>PCCP</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">PCCP</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/sat" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>SAT</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">SAT</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/xii" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>XI/XII</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">XI/XII</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/jeemain" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>JEE MAIN</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">JEE MAIN</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/neet" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>NEET</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">NEET</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/olympiads" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Olympiads</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">Olympiads</Typography>
+                  </MenuItem>
                 </Link>
                 <Link href="/boards" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Boards</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">Boards</Typography>
+                  </MenuItem>
                 </Link>
               </MenuList>
             </ClickAwayListener>

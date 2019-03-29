@@ -43,7 +43,7 @@ const styles = (theme: any) =>
     },
     fabclass: {
       margin: theme.spacing.unit,
-      backgroundColor: "white",
+      // backgroundColor: "white",
       "& span $instagram": {
         background: "url(" + instagramUrl + ")",
         width: 24,

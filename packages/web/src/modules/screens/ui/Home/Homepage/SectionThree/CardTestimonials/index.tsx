@@ -22,7 +22,7 @@ const styles = (theme: any) =>
       width: "150px",
       height: "150px",
       zIndex: 1,
-      top: 73,
+      top: -80,
       margin: "0 auto"
     },
     div: {
@@ -49,28 +49,29 @@ class CardTestimonials extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.div} style={{ textAlign: "center" }}>
-        <Avatar
-          alt="Remy Sharp"
-          className={classes.avatar}
-          src="https://material-ui.com//static/images/avatar/1.jpg"
-        />
+      <div
+        className={classes.div}
+        style={{ textAlign: "center", paddingTop: "83px" }}
+      >
         <Paper elevation={3} className={classes.paper}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Typography variant="body2" component="h3">
-            {this.props.name}
-          </Typography>
-          <Typography variant="overline">{this.props.air}</Typography>
-          <Typography variant="button" component="h3">
-            {this.props.studycenter}
-          </Typography>
-          <br />
-          <Typography variant="body1" component="p" align="left">
-            {this.props.data}
-          </Typography>
+          <Avatar
+            alt="Remy Sharp"
+            className={classes.avatar}
+            src="https://material-ui.com//static/images/avatar/1.jpg"
+          />
+          <div style={{ marginTop: "-60px" }}>
+            <Typography variant="body2" component="h3">
+              {this.props.name}
+            </Typography>
+            <Typography variant="overline">{this.props.air}</Typography>
+            <Typography variant="button" component="h3">
+              {this.props.studycenter}
+            </Typography>
+            <br />
+            <Typography variant="body1" component="p" align="left">
+              {this.props.data}
+            </Typography>
+          </div>
         </Paper>
       </div>
     );

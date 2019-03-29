@@ -7,6 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Popper from "@material-ui/core/Popper";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
@@ -45,7 +46,7 @@ class Academics extends React.Component<Props> {
           className={classes.button}
           onClick={this.handleToggle}
         >
-          Academics
+          <Typography variant="button">Academics</Typography>
         </Button>
         <Popper
           open={open}
@@ -59,18 +60,14 @@ class Academics extends React.Component<Props> {
           <Paper className={classes.paper}>
             <ClickAwayListener onClickAway={this.handleClose}>
               <MenuList>
-                {/* <Link href="/pccp" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>About PCCP</MenuItem>
-                </Link> */}
-                {/* <Link href="/key" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Key Process</MenuItem>
-                </Link> */}
                 <Link
                   href="/academicexcellence"
                   style={{ textDecoration: "none" }}
                 >
                   <MenuItem onClick={this.handleClose}>
-                    Academic Excellence
+                    <Typography variant="button">
+                      Academic Excellence
+                    </Typography>
                   </MenuItem>
                 </Link>
                 <Link
@@ -78,16 +75,20 @@ class Academics extends React.Component<Props> {
                   style={{ textDecoration: "none" }}
                 >
                   <MenuItem onClick={this.handleClose}>
-                    Exam Information
+                    <Typography variant="button">Exam Information</Typography>
                   </MenuItem>
                 </Link>
                 <Link href="/methodology" style={{ textDecoration: "none" }}>
                   <MenuItem onClick={this.handleClose}>
-                    Teaching Methodology
+                    <Typography variant="button">
+                      Teaching Methodology
+                    </Typography>
                   </MenuItem>
                 </Link>
                 <Link href="/analysis" style={{ textDecoration: "none" }}>
-                  <MenuItem onClick={this.handleClose}>Test Analysis</MenuItem>
+                  <MenuItem onClick={this.handleClose}>
+                    <Typography variant="button">Test Analysis</Typography>
+                  </MenuItem>
                 </Link>
               </MenuList>
             </ClickAwayListener>

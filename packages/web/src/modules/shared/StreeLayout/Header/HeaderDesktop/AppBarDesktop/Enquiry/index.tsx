@@ -2,12 +2,12 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
+import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: any) =>
   createStyles({
     button: {
-      margin: theme.spacing.unit,
-      color: "#86576b"
+      margin: theme.spacing.unit
     },
     enquiry: {
       //  textAlign: "right"
@@ -33,7 +33,9 @@ class Enquiry extends React.Component<Props> {
       <div className={classes.enquiry}>
         <Link href="/enquiry" style={{ textDecoration: "none" }}>
           <Button className={classes.button} variant="outlined">
-            ENQUIRY
+            <Typography variant="button" style={{ color: "#86576b" }}>
+              ENQUIRY
+            </Typography>
           </Button>
         </Link>
       </div>

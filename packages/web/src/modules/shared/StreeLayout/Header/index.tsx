@@ -17,7 +17,7 @@ class Header extends React.Component<Props> {
 
   render() {
     return (
-      <div>
+      <div style={{ top: 0, left: 0, zIndex: 20, position: "sticky" }}>
         <Hidden only={["xs", "sm", "md"]}>
           <HeaderDesktop />
         </Hidden>
