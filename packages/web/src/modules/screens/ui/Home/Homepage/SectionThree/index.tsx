@@ -474,7 +474,7 @@ class SectionThree extends React.Component<Props> {
         </Grid>
         <Hidden only={["xs"]}>
           <Carousel
-            autoplay={false}
+            autoplay={true}
             autoplayInterval={1000}
             slideIndex={this.state.slideIndex}
             dragging={true}
@@ -486,7 +486,7 @@ class SectionThree extends React.Component<Props> {
               <Grid item={true} md={1} sm={1} lg={1} />
               <Grid item={true} sm={5} md={5} lg={5}>
                 <CardTestimonials
-                  name="UTKARSH GUPTA"
+                  name="UTKARSH GUPTA P"
                   air="AIR-17 (GEN), JEE (Advanced) 2016"
                   studycenter="Study Centre: Kota"
                   data="Hi, I am Utkarsh Gupta and i am from Kota. I have secured a rank of 17 in general category. I am happy on my success, I was sure that I would be selected. I give credit of my success to my mentors (RKV Sir,AGL Sir, SM Sir, CSS Sir) and to my parents who supported throughout the preparation. Daily homework, Consistent hard work leads me to success. Hard work and practice. Resonance provided me a great study environment and dedicated coaching, which helped me crack JEE(Advanced) with flying colors. I am quite surethat without Resonance, the results would have been very different."

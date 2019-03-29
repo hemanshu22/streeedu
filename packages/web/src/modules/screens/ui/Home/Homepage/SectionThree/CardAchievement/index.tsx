@@ -63,8 +63,8 @@ class CardAchievement extends React.Component<Props> {
       <div className={classes.achievements}>
         <Hidden only={["xs", "sm"]}>
           <Carousel
-            autoplay={false}
-            autoplayInterval={1000}
+            autoplay={true}
+            autoplayInterval={5000}
             slideIndex={this.state.slideIndex}
             dragging={true}
             swiping={true}
@@ -193,8 +193,8 @@ class CardAchievement extends React.Component<Props> {
         {/* only sm device */}
         <Hidden only={["xs", "md", "lg", "xl"]}>
           <Carousel
-            autoplay={false}
-            autoplayInterval={1000}
+            autoplay={true}
+            autoplayInterval={5000}
             slideIndex={this.state.slideIndex}
             dragging={true}
             swiping={true}
@@ -288,8 +288,8 @@ class CardAchievement extends React.Component<Props> {
         {/*  only xs device */}
         <Hidden only={["lg", "xl", "md", "sm"]}>
           <Carousel
-            autoplay={false}
-            autoplayInterval={1000}
+            autoplay={true}
+            autoplayInterval={5000}
             slideIndex={this.state.slideIndex}
             dragging={true}
             swiping={true}
