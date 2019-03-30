@@ -39,7 +39,7 @@ class TestAnalysis extends React.Component<Props> {
             lg={12}
             className={classes.gridcontainer}
           >
-            <img src={Analysis} />
+            <img src={Analysis} style={{ width: "100%" }} />
           </Grid>
         </Grid>
         <br />
