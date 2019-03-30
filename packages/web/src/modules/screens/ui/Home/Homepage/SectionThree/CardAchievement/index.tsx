@@ -26,6 +26,21 @@ class CardAchievement extends React.Component<Props> {
     open: false,
     slideIndex: 0
   };
+  nextSlide = () => {
+    if (this.state.slideIndex === 1) {
+      this.setState({ slideIndex: 0 });
+    } else {
+      this.setState({ slideIndex: this.state.slideIndex + 1 });
+    }
+  };
+
+  previousSlide = () => {
+    if (this.state.slideIndex === 0) {
+      this.setState({ slideIndex: 0 });
+    } else {
+      this.setState({ slideIndex: this.state.slideIndex - 1 });
+    }
+  };
   handleCenterLeftControls = ({ previousSlide }: any) => {
     return (
       <Fab
@@ -35,7 +50,7 @@ class CardAchievement extends React.Component<Props> {
           height: 46,
           left: "15px"
         }}
-        onClick={previousSlide}
+        onClick={this.previousSlide}
       >
         <KeyboardArrowLeftIcon />
       </Fab>
@@ -51,7 +66,7 @@ class CardAchievement extends React.Component<Props> {
           height: 46,
           right: "15px"
         }}
-        onClick={nextSlide}
+        onClick={this.nextSlide}
       >
         <KeyboardArrowRightIcon />
       </Fab>
@@ -64,7 +79,7 @@ class CardAchievement extends React.Component<Props> {
         <Hidden only={["xs", "sm"]}>
           <Carousel
             autoplay={true}
-            autoplayInterval={5000}
+            autoplayInterval={9000}
             slideIndex={this.state.slideIndex}
             dragging={true}
             swiping={true}

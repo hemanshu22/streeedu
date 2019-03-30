@@ -77,8 +77,8 @@ class Slider extends React.Component<Props> {
   render() {
     return (
       <Carousel
-        autoplay={false}
-        autoplayInterval={5000}
+        autoplay={true}
+        autoplayInterval={4000}
         slideIndex={this.state.slideIndex}
         dragging={true}
         swiping={true}

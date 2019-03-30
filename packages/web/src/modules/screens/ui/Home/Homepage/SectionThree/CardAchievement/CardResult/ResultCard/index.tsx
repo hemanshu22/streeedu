@@ -59,11 +59,9 @@ class ResultCard extends React.Component<Props> {
             >
               {this.props.medal}
             </Typography>
-            {/* <br /> */}
             <Typography variant="body1" component="h3" align="center">
               {this.props.grade}
             </Typography>
-            {/* <br /> */}
             <Typography variant="body1" component="h3" align="center">
               {this.props.school}
             </Typography>

@@ -3,6 +3,8 @@ import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
+import Zoom from "@material-ui/core/Zoom";
+// import Switch from "@material-ui/core/Switch";
 
 const styles = (theme: any) =>
   createStyles({
@@ -47,61 +49,71 @@ class CardOne extends React.Component<Props> {
   render() {
     const { classes, backgroundcolor } = this.props;
     return (
-      <Paper
-        elevation={3}
-        className={classes.cardinner}
-        style={{ backgroundColor: backgroundcolor }}
-      >
-        <Typography
-          variant="display1"
-          component="h2"
-          align="center"
-          className={classes.fontcolor}
-          style={{ textShadow: "-5px 1px 4px #ad1457" }}
-        >
-          {this.props.title}
-        </Typography>
-        <br />
-        <Typography
-          variant="body1"
-          component="h3"
-          align="center"
-          className={classes.fontcolor}
-        >
-          {this.props.subheading}
-        </Typography>
-        <br />
-        <Typography variant="body2" gutterBottom={true} align="right">
-          <Link
-            href={this.props.link}
-            style={{
-              color: "#ffffff"
-            }}
+      <div>
+        {/* <Switch checked={true} aria-label="Collapse" /> */}
+        <Zoom in={true}>
+          <Paper
+            elevation={3}
+            className={classes.cardinner}
+            style={{ backgroundColor: backgroundcolor }}
           >
-            Learn more&nbsp;
-            <svg
-              className="link-arrow-image"
-              width="11px"
-              height="8px"
-              viewBox="0 0 11 8"
-              version="1.1"
+            <Typography
+              variant="display1"
+              component="h2"
+              align="center"
+              className={classes.fontcolor}
+              style={{ textShadow: "-5px 1px 4px #ad1457" }}
             >
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g
-                  className="group-path"
-                  transform="translate(-138.000000, -586.000000)"
-                  fill="#ffffff"
+              {this.props.title}
+            </Typography>
+            <br />
+            <Typography
+              variant="body1"
+              component="h3"
+              align="center"
+              className={classes.fontcolor}
+            >
+              {this.props.subheading}
+            </Typography>
+            <br />
+            <Typography variant="body2" gutterBottom={true} align="right">
+              <Link
+                href={this.props.link}
+                style={{
+                  color: "#ffffff"
+                }}
+              >
+                Learn more&nbsp;
+                <svg
+                  className="link-arrow-image"
+                  width="11px"
+                  height="8px"
+                  viewBox="0 0 11 8"
+                  version="1.1"
                 >
-                  <path
-                    d="M145.2803,586.507862 L144.2193,587.568863 L145.9393,589.287862 L138.7503,589.287862 C138.3363,589.287862 138.0003,589.623862 138.0003,590.037862 C138.0003,590.451862 138.3363,590.787862 138.7503,590.787862 L145.9393,590.787862 L144.2193,592.507862 L145.2803,593.568863 L148.8103,590.037862 L145.2803,586.507862 Z"
-                    id="Fill-1"
-                  />
-                </g>
-              </g>
-            </svg>
-          </Link>
-        </Typography>
-      </Paper>
+                  <g
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      className="group-path"
+                      transform="translate(-138.000000, -586.000000)"
+                      fill="#ffffff"
+                    >
+                      <path
+                        d="M145.2803,586.507862 L144.2193,587.568863 L145.9393,589.287862 L138.7503,589.287862 C138.3363,589.287862 138.0003,589.623862 138.0003,590.037862 C138.0003,590.451862 138.3363,590.787862 138.7503,590.787862 L145.9393,590.787862 L144.2193,592.507862 L145.2803,593.568863 L148.8103,590.037862 L145.2803,586.507862 Z"
+                        id="Fill-1"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </Link>
+            </Typography>
+          </Paper>
+        </Zoom>
+      </div>
     );
   }
 }

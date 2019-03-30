@@ -2,22 +2,7 @@ import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import ResultCard from "./ResultCard";
 
-const styles = (theme: any) =>
-  createStyles({
-    paper: {
-      maxWidth: "200px",
-      height: "auto",
-      padding: "10px",
-      backgroundColor: "#fafafa"
-    },
-    avatar: {
-      margin: 10,
-      width: 100,
-      height: 100,
-      border: "3px solid #dedddd"
-      // padding: "1px"
-    }
-  });
+const styles = (theme: any) => createStyles({});
 
 interface Props extends WithStyles<typeof styles> {
   medal: any;
