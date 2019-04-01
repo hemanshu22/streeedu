@@ -1,7 +1,6 @@
 import * as React from "react";
 import { withStyles, createStyles, WithStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-// import Typography from "@material-ui/core/Typography";
 import ContactFooter from "./ContactFooter";
 import Navigate from "./Navigate";
 import SocialMedia from "./SocialMedia";
@@ -43,7 +42,6 @@ const styles = (theme: any) =>
     },
     fabclass: {
       margin: theme.spacing.unit,
-      // backgroundColor: "white",
       "& span $instagram": {
         background: "url(" + instagramUrl + ")",
         width: 24,
@@ -92,7 +90,6 @@ class Footer extends React.Component<Props> {
           >
             <OfficeAddress />
           </Grid>
-
           <Grid
             item={true}
             xs={12}
